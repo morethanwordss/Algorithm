@@ -13,10 +13,10 @@ a<sup>n</sup> = 1                if n == 0
 ## Implementation
 ### Recusrsive
 ```cpp
-long long binpow(long long a, long long b) {
+long long pow(long long a, long long b) {
     if (b == 0)
         return 1;
-    long long res = binpow(a, b / 2);
+    long long res = pow(a, b / 2);
     if (b % 2)
         return res * res * a;
     else
@@ -25,7 +25,7 @@ long long binpow(long long a, long long b) {
 ```
 ### Loop
 ```cpp
-long long binpow(long long a, long long b) {
+long long pow(long long a, long long b) {
     long long res = 1;
     while (b > 0) {
         if (b & 1)
