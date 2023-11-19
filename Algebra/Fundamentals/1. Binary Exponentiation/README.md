@@ -11,7 +11,7 @@ a<sup>n</sup> = 1 (if n == 0)
 = (a<sup><sup>(n-1)</sup>/<sub>2</sub></sup>)<sup>2</sup> • a (if n is odd)
 </pre>
 ## Implementation
-### Recusrsive Approach
+### i) Recursive 
 ```cpp
 // c++
 long long pow(long long a, long long b) {
@@ -35,7 +35,7 @@ def power(a, b):
     else:
         return res * res
 ```
-### Using Loop
+### ii) Using Loop
 ```cpp
 // c++
 long long pow(long long a, long long b) {
