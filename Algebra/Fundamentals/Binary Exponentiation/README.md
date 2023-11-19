@@ -6,8 +6,7 @@ By using this trick we can calculate _a<sup>n</sup>_ in _O(log n)_ instead of _O
 ## Algorithm
 We know that,
 <p>a <sup>b + c</sup> = a <sup>b</sup> • a <sup>c</sup></p>
-Let,
-  a = 3
+Let,<bre>a = 3</bre>
   n = 13
 Then,
 
