@@ -1,4 +1,4 @@
 # Binary Exponentiation
 ## Introduction
-Binary exponentiation (also known as exponentiation by squaring) is a trick which allows to calculate **a<sup>n</sup>** using only **O(log n)** multiplications (instead of  
-**O(n)** multiplications required by the naive approach).
+Binary exponentiation (also known as exponentiation by squaring) is a trick which allows to calculate _**a<sup>n</sup>**_ using only _**O(log n)**_ multiplications (instead of  
+_**O(n)**_ multiplications required by the naive approach).
