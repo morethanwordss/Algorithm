@@ -41,7 +41,8 @@ long long binpow(long long a, long long b) {
 <pre>
 1. Effective computation of large exponents modulo a number
    Question: Compute x<sup>n</sup> mod m
-1. Effective computation of Fibonacci numbers
+2. Effective computation of Fibonacci numbers
+   Question: Compute n<sup>th</sup> Fibonacci number (F<sub>n</sub>)
 1. Applying a permutation k times
 1. Fast application of a set of geometric operations to a set of points
 1. Number of paths of length k in a graph
