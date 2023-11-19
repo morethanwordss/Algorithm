@@ -1,3 +1,5 @@
 # Binary Exponentiation
 ## Introduction
-AKA ~~huegf2u~~
+<pre>
+  a<sub>76</sub>
+</pre>
