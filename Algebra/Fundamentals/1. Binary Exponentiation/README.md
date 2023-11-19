@@ -11,9 +11,9 @@ a<sup>n</sup> = 1 (if n == 0)
 = (a<sup><sup>(n-1)</sup>/<sub>2</sub></sup>)<sup>2</sup> • a (if n is odd)
 </pre>
 ## Implementation
-### Recusrsive
-#### C++
+### Recusrsive Approach
 ```cpp
+// c++
 long long pow(long long a, long long b) {
     if (b == 0)
         return 1;
@@ -24,8 +24,8 @@ long long pow(long long a, long long b) {
         return res * res;
 }
 ```
-#### Python
 ```py
+# Python
 def power(a, b):
     if b == 0:
         return 1
@@ -35,9 +35,9 @@ def power(a, b):
     else:
         return res * res
 ```
-### Loop
-#### c++
+### Using Loop
 ```cpp
+// c++
 long long pow(long long a, long long b) {
     long long res = 1;
     while (b > 0) {
@@ -49,8 +49,8 @@ long long pow(long long a, long long b) {
     return res;
 }
 ```
-#### python
 ``` py
+# Python
 def power(a, b):
     res = 1
     while b > 0:
