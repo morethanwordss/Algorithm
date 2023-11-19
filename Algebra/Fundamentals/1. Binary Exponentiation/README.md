@@ -13,7 +13,7 @@ a<sup>n</sup> = 1 (if n == 0)
 ## Implementation
 ### i) Recursive 
 ```cpp
-// c++
+/* c++ */
 long long pow(long long a, long long b) {
     if (b == 0)
         return 1;
@@ -35,9 +35,9 @@ def power(a, b):
     else:
         return res * res
 ```
-### ii) Using Loop
+### ii) Loop
 ```cpp
-// c++
+/* c++ */
 long long pow(long long a, long long b) {
     long long res = 1;
     while (b > 0) {
