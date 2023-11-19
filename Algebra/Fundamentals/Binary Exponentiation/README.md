@@ -14,5 +14,5 @@ Let,
   
 Then,
 
-```a<sup>n</sup> = 3<sup>13</sup> = 3<sup>1101<sub>2</sub></sup> = 3<sup>8</sup> • 3<sup>4</sup> • 3<sup>1</sup>```
+<p>a<sup>n</sup> = 3<sup>13</sup> = 3<sup>1101<sub>2</sub></sup> = 3<sup>8</sup> • 3<sup>4</sup> • 3<sup>1</sup></p>
 
