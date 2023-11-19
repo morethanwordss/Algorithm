@@ -12,6 +12,7 @@ a<sup>n</sup> = 1 (if n == 0)
 </pre>
 ## Implementation
 ### Recusrsive
+#### C++
 ```cpp
 long long pow(long long a, long long b) {
     if (b == 0)
@@ -23,7 +24,19 @@ long long pow(long long a, long long b) {
         return res * res;
 }
 ```
+#### Python
+```py
+def power(a, b):
+    if b == 0:
+        return 1
+    res = power(a, b // 2)
+    if b % 2:
+        return res * res * a
+    else:
+        return res * res
+```
 ### Loop
+#### c++
 ```cpp
 long long pow(long long a, long long b) {
     long long res = 1;
@@ -36,6 +49,18 @@ long long pow(long long a, long long b) {
     return res;
 }
 ```
+#### python
+``` py
+def power(a, b):
+    res = 1
+    while b > 0:
+        if b & 1:
+            res = res * a
+        a = a * a
+        b >>= 1
+    return res
+```
+
 ## Applications
 <pre>
 1. Effective computation of large exponents modulo a number
