@@ -32,16 +32,12 @@ long long binpow(long long a, long long b) {
     return res;
 }
 ```
-### a<sup>b</sup> mod m
-```cpp
-long long binpow(long long a, long long b, long long m) {
-    a %= m;
-    long long res = 1;
-    while (b > 0) {
-        if (b & 1) res = res * a % m;
-        a = a * a % m;
-        b >>= 1;
-    }
-    return res;
-}
-```
+## Applications
+<pre>
+1. Effective computation of large exponents modulo a number
+1. Effective computation of Fibonacci numbers
+1. Applying a permutation k times
+1. Fast application of a set of geometric operations to a set of points
+1. Number of paths of length k in a graph
+1. Variation of binary exponentiation: multiplying two numbers modulo
+</pre>
