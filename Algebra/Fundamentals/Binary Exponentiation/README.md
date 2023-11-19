@@ -1,4 +1,3 @@
-⁰¹²³⁴⁵⁶⁷⁸⁹
 # Binary Exponentiation
 ## Introduction
 <pre>
@@ -41,10 +40,25 @@ long long binpow(long long a, long long b) {
 <pre>
 1. Effective computation of large exponents modulo a number
    Question: Compute x<sup>n</sup> mod m
+   
 2. Effective computation of Fibonacci numbers
    Question: Compute n<sup>th</sup> Fibonacci number (F<sub>n</sub>)
-1. Applying a permutation k times
-1. Fast application of a set of geometric operations to a set of points
-1. Number of paths of length k in a graph
-1. Variation of binary exponentiation: multiplying two numbers modulo
+   
+3. Applying a permutation k times
+   Question: You are given a sequence of length n. Apply to it a given permutation k times
+   
+4. Fast application of a set of geometric operations to a set of points
+   Question: Given n  points p<sub>i</sub>, apply m  transformations to each of these points.
+   Each transformation can be a shift, a scaling or a rotation around a given axis by a given angle.
+   There is also a "loop" operation which applies a given list of transformations k times ("loop" operations can be nested).
+   You should apply all transformations faster than O(n * length), where
+   length  is the total number of transformations to be applied (after unrolling "loop" operations).
+   
+5. Number of paths of length k in a graph
+   Question: Given a directed unweighted graph of n  vertices,
+   find the number of paths of length k from any vertex u to any other vertex v
+   
+6. Variation of binary exponentiation: multiplying two numbers modulo
+   Question:  Multiply two numbers a and b modulo m.
+   a and b  fit in the built-in data types, but their product is too big to fit in a 64-bit integer. 
 </pre>
