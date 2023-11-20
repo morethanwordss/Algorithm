@@ -42,43 +42,6 @@ x = y<sub>1</sub>
 y = (x<sub>1</sub> - (ceil(<sup>a</sup>/<sub>b</sub>) * y<sub>1</sub>))
 </pre>
 ## Implementation
-### Euclidean ALgorithm for GCD (Recursive)
-```c++
-/* c++ */
-int gcd (int a, int b) {
-    if (b == 0)
-        return a;
-    else
-        return gcd (b, a % b);
-}
-```
-```py
-# Python
-def gcd(a, b):
-    if b == 0:
-        return a
-    else:
-        return gcd(b, a % b)
-```
-### Euclidean ALgorithm for GCD (Loop)
-```c++
-/* c++ */
-int gcd (int a, int b) {
-    while (b) {
-        a %= b;
-        swap(a, b);
-    }
-    return a;
-}
-```
-```python
-# Python
-def gcd(a, b):
-    while b:
-        a %= b
-        a, b = b, a
-    return a
-```
 ### Extended Euclidean Algorithm (Recursive)
 ```c++
 /* c++ */
