@@ -23,6 +23,11 @@ Let us assume we found the coefficients _(x<sub>1</sub>, y<sub>1</sub>)_ for `(b
 <pre>
 b * x<sub>1</sub> + (a mod b) * y<sub>1</sub> = g
 </pre>
+And we want to finf the pair `(x, y)` for `(a, b)` :
+<pre>
+a * x + b * y = g
+</pre>
+We can represent `a mod b` as <ceil>wirh</ceil>
 ```c++
 /* c++ */
 int gcd (int a, int b) {
