@@ -8,7 +8,7 @@ If we recall the Euclidean Algorithm,
 gcd(a, b) = a                If b == 0
           = gcd(b, a mod b)  Otherwise
 </pre>
-We can see that the algorithm ends with `b == 0` and `a = gcd(a, b)`. For this parameters, we can easily find the coefficients `x` and `y` for the equation <pre>a * x + b * y = gcd(a, b)</pre>
+We can see that the algorithm ends with `b == 0` and `a = gcd(a, b)`. For this parameters, we can easily find the coefficients `x` and `y` for the equation `a * x + b * y = gcd(a, b)`
 ```c++
 /* c++ */
 int gcd (int a, int b) {
