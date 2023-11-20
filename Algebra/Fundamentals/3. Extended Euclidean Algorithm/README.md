@@ -26,18 +26,16 @@ Let us assume we found the coefficients _(x<sub>1</sub>, y<sub>1</sub>)_ for `(b
 
 And we want to find the pair `(x, y)` for `(a, b)` : `a * x + b * y = g`
 
-We can represent `a mod b` as `a - (a // b) * b` , where `//` denotes the integer division.
-
-Now, Substituting `a mod b` with `a - (a // b) * b` gives us:
+We can represent `a mod b` as `a - ceil(a / b) * b`. And so, substituting `a mod b` with `a - ceil(a / b) * b` gives us:
 
 <pre>
    b * x<sub>1</sub> + (a mod b) * y<sub>1</sub> = g
--> b * x<sub>1</sub> + (a - (a // b) * b) * y<sub>1</sub> = g
--> (a - (a // b) * b) * y<sub>1</sub> + b * x<sub>1</sub> = g
--> a * y<sub>1</sub> - ((a // b) * b) * y<sub>1</sub> + b * x<sub>1</sub> = g
--> a * y<sub>1</sub> - b * ((a // b) * y<sub>1</sub>) +  b * x<sub>1</sub> = g
--> a * y<sub>1</sub> +  b * x<sub>1</sub> - b * ((a // b) * y<sub>1</sub>) = g
--> a * y<sub>1</sub> +  b (x<sub>1</sub> - * ((a // b) * y<sub>1</sub>)) = g
+-> b * x<sub>1</sub> + (a - ceil(<sup>a</sup> / <sub>b</sub>) * b) * y<sub>1</sub> = g
+-> (a - ceil(<sup>a</sup> / <sub>b</sub>) * b) * y<sub>1</sub> + b * x<sub>1</sub> = g
+-> a * y<sub>1</sub> - (ceil(<sup>a</sup> / <sub>b</sub>) * b) * y<sub>1</sub> + b * x<sub>1</sub> = g
+-> a * y<sub>1</sub> - b * (ceil(<sup>a</sup> / <sub>b</sub>) * y<sub>1</sub>) +  b * x<sub>1</sub> = g
+-> a * y<sub>1</sub> +  b * x<sub>1</sub> - b * (ceil(<sup>a</sup> / <sub>b</sub>) * y<sub>1</sub>) = g
+-> a * y<sub>1</sub> +  b (x<sub>1</sub> - * (ceil(<sup>a</sup> / <sub>b</sub>) * y<sub>1</sub>)) = g
 </pre>
 ```c++
 /* c++ */
