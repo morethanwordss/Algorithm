@@ -27,7 +27,7 @@ And we want to finf the pair `(x, y)` for `(a, b)` :
 <pre>
 a * x + b * y = g
 </pre>
-We can represent `a mod b` as <ceil>wirh</ceil>
+We can represent `a mod b` as `a - ceil(a / b) * b` .
 ```c++
 /* c++ */
 int gcd (int a, int b) {
