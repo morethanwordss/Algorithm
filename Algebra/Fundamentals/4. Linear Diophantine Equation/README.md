@@ -145,9 +145,9 @@ Now,
 For the minimum value of `(x + y)`, `k . (b - a) / g` has to be minimum
 <pre>
 if b > a:
-   for (k = minimum) k . (b - a) / g = minimum
+   for (k = minimum) k . (b - a) / g will be minimum
 if b < a:
-   for (k = maximum) k . (b - a) / g = minimum
+   for (k = maximum) k . (b - a) / g will be minimum
 if b == a:
    for (any value of k) k . (b - a) / g = 0 
 </pre>
