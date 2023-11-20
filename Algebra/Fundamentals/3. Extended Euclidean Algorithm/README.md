@@ -20,7 +20,7 @@ With this information we can easily find the value of `x` and `y` for `(a, b)` f
 </pre>
 Starting from these coefficients `(x, y) = (1, 0)` , we can go backwards up the recursive calls.
 
-All we need to do is to figure out how the coefficients `x` and `y` change during the transition from `(a, b)` to `(b, a mod b)` .
+All we need to do is to figure out how the coefficients `x` and `y` change during the transition from `(b, a mod b)` to `(a, b)` as we go backwards up the recusrsive calls.
 
 The Equation for coefficients `(x, y)` for `(a, b)` is `a * x + b * y = g`. 
 
