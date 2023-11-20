@@ -1,4 +1,5 @@
-# Introduction
+# Linear Diophantine Equation
+## Introduction
 A Linear Diophantine Equation is an equation of the general form,
 <pre>a.x + b.y = c </pre>
 Where `a`, `b`, `c` are given integers, and `x`, `y` are unknown integers.
@@ -8,7 +9,7 @@ There are 4 classical problems on this equation,
 - Finding all solution
 - Finding the number of solutions and the solutions themselves in a given interval
 - finding a solution with minimum value of `x + y`
-# The Degenerate Case
+## The Degenerate Case
 if `a == 0` and `b == 0`, the equation, 
 <pre>
    a.x + b.y = c
@@ -17,7 +18,7 @@ if `a == 0` and `b == 0`, the equation,
 >> c = 0
 </pre>
 has no solution if `c != 0` and has infinite many solution if `c == 0` .
-# Finding many solution
+## Finding many solution
 In the equation `a.x + b.y = c`,
 - `a` is divisible by `gcd(a, b)`
 - `a.x` is disible by `gcd(a, b)`
