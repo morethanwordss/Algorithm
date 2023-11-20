@@ -29,6 +29,7 @@ x can be any integer
 </pre>
 In the same way, if `b == 0`, `x = c/a` and `y` can be any integer.  
 >> If a != 0 and b != 0
+
 In the equation `a.x + b.y = c`,
 - `a` is divisible by `gcd(a, b)`
 - `a.x` is disible by `gcd(a, b)`
