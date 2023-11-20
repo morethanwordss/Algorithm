@@ -114,7 +114,7 @@ Let the base solution for the equation `a.x + b.y = c` is `(x1, y1)`. Now,
 Therefore, `(x1, y1)` is also a solution for the equation `a.x + b.y = c`, where,
 <pre>
 x<sub>1</sub> = x<sub>0</sub> + b/g
-y<sub>2</sub> = y<sub>0</sub> - b/g
+y<sub>1</sub> = y<sub>0</sub> - b/g
 </pre>
 Notice, this process can repeated again. So, the general form of all the solution is,
 <pre>
