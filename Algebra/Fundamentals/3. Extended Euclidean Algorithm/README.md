@@ -1,10 +1,10 @@
 # Extended Euclidean Algorithm
 ## Introduction
 While the Euclidean Algorithm calculates only the GCD of two integers `a` and `b`, the the extended version also calculates such coefficients `x` and `y` for which:
-<pre>a * x + b * y = gcd(a, b)</pre>
+<pre>a.x + b.y = gcd(a, b)</pre>
 
 ## Algorithm
-Lets denote `gcd(a, b)` with `g` : <pre>a * x + b * y = g</pre>
+Lets denote `gcd(a, b)` with `g` : <pre>a.x + b.y = g</pre>
 If we recall the Euclidean Algorithm, 
 
 <pre>
@@ -15,8 +15,8 @@ We can see that the algorithm ends with `b == 0` and `a = g`.
 
 With this information we can easily find the value of `x` and `y` for `(a, b)` from the equation,
 <pre>
-   a * x + b * y = g
->> g * 1 + 0 * 0 = g
+   a.x + b.y = g
+>> g.1 + 0.0 = g
 </pre>
 Starting from these coefficients `(x, y) = (1, 0)` , we can go backwards up the recursive calls.
 
@@ -25,21 +25,20 @@ All we need to do is to figure out how the coefficients `x` and `y` change durin
 We want to find the pair `(x, y)` for `(a, b)` from the equation `a * x + b * y = g` assuming the coefficients `(x1, y1)` for `(b, a mod b)`.
 For the coefficient `(x1, y1)` for `(b, a mod b)` , the Equation is,  <pre>b * x<sub>1</sub> + (a mod b) * y<sub>1</sub> = g</pre>
 
-We can represent `a mod b` as `a - ceil(a / b) * b`.  And so, substituting `a mod b` with `a - ceil(a / b) * b` gives us:
+We can represent `a mod b` as `a - ceil(a / b).b`.  And so, substituting `a mod b` with `a - ceil(a / b).b` gives us:
 
 <pre>
-             b * x<sub>1</sub> + (a mod b) * y<sub>1</sub>                    = g          
->>           b * x<sub>1</sub> + (a - ceil(a / b) * b) * y<sub>1</sub>        = g          
->>           (a - ceil(a / b) * b) * y<sub>1</sub> + b * x<sub>1</sub>        = g          
->>           a * y<sub>1</sub> - ceil(a / b) * b * y<sub>1</sub> +  b * x<sub>1</sub>    = g          
->>           a * y<sub>1</sub> - b * ceil(a / b) * y<sub>1</sub> +  b * x<sub>1</sub>    = g          
->>           a * y<sub>1</sub> +  b * x<sub>1</sub> - b * ceil(a / b) * y<sub>1</sub>    = g          
->>           a * y<sub>1</sub> +  b * (x<sub>1</sub> - ceil(a / b) * y<sub>1</sub>))     = g
+             b.x<sub>1</sub> + (a mod b).y<sub>1</sub>                    = g          
+>>           b.x<sub>1</sub> + (a - b.ceil(a / b)).y<sub>1</sub>        = g          
+>>           (a - b.ceil(a / b)).y<sub>1</sub> + b.x<sub>1</sub>        = g          
+>>           a.y<sub>1</sub> - b.ceil(a / b).y<sub>1</sub> +  b.x<sub>1</sub>    = g          
+>>           a.y<sub>1</sub> +  b.x<sub>1</sub> - b.ceil(a / b).y<sub>1</sub>    = g          
+>>           a.y<sub>1</sub> +  b(x<sub>1</sub> - ceil(a / b).y<sub>1</sub>))     = g
 </pre>
-comparing this with the equation `a * x + b * y = g` ,
+comparing this with the equation `a.x + b.y = g` ,
 <pre>
 x = y<sub>1</sub>
-y = (x<sub>1</sub> - (ceil(<sup>a</sup>/<sub>b</sub>) * y<sub>1</sub>))
+y = (x<sub>1</sub> - (ceil(<sup>a</sup>/<sub>b</sub>).y<sub>1</sub>))
 </pre>
 ## Implementation
 ### Extended Euclidean Algorithm (Recursive)
