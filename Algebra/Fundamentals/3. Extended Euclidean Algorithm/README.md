@@ -33,6 +33,11 @@ Now, Substituting `a mod b` with `a - (a // b) * b` gives us:
 <pre>
    b * x<sub>1</sub> + (a mod b) * y<sub>1</sub> = g
 -> b * x<sub>1</sub> + (a - (a // b) * b) * y<sub>1</sub> = g
+-> (a - (a // b) * b) * y<sub>1</sub> + b * x<sub>1</sub> = g
+-> a * y<sub>1</sub> - ((a // b) * b) * y<sub>1</sub> + b * x<sub>1</sub> = g
+-> a * y<sub>1</sub> - b * ((a // b) * y<sub>1</sub>) +  b * x<sub>1</sub> = g
+-> a * y<sub>1</sub> +  b * x<sub>1</sub> - b * ((a // b) * y<sub>1</sub>) = g
+-> a * y<sub>1</sub> +  b (x<sub>1</sub> - * ((a // b) * y<sub>1</sub>)) = g
 </pre>
 ```c++
 /* c++ */
