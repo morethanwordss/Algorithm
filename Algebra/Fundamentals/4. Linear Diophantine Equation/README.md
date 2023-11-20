@@ -36,7 +36,7 @@ From the Extended Euclidean Algorithm we can find the value of `(x', y')` for th
 
 As `c` is divisible by `gcd(a, b) = 0`,
 
-Let, `k = c / gcd(a, b)`
+Let `k = c / gcd(a, b)`,
 <pre>
    a.x' + b.y'       = gcd(a, b)
 >> (a.x' + b.y') . k = gcd(a, b) . k
