@@ -1,5 +1,5 @@
 # Introduction
-A Linear Diophantine Equation is an equation of the general form:
+A Linear Diophantine Equation is an equation of the general form,
 <pre>a.x + b.y = c </pre>
 Where `a`, `b`, `c` are given integers, and `x`, `y` are unknown integers.
 
