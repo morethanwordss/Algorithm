@@ -28,11 +28,11 @@ For the coefficient `(x1, y1)` for `(b, a mod b)` , the Equation is,  <pre>b.x<s
 We can represent `a mod b` as `a - ceil(a / b).b`.  And so, substituting `a mod b` with `a - ceil(a / b).b` gives us:
 
 <pre>
-             b.x<sub>1</sub> + (a mod b).y<sub>1</sub>                    = g          
->>           b.x<sub>1</sub> + (a - ceil(a/b).b).y<sub>1</sub>            = g          
->>           b.x<sub>1</sub> + a.y<sub>1</sub> - ceil(a/b).b.y<sub>1</sub>          = g
->>           a.y<sub>1</sub> + b.x<sub>1</sub> - ceil(a/b).b.y<sub>1</sub>          = g
->>           a.y<sub>1</sub> + b(x<sub>1</sub> - ceil(a/b).y<sub>1</sub>            = g
+          b.x<sub>1</sub> + (a mod b).y<sub>1</sub>                   = g          
+>>        b.x<sub>1</sub> + (a - ceil(a/b).b).y<sub>1</sub>           = g          
+>>        b.x<sub>1</sub> + a.y<sub>1</sub> - ceil(a/b).b.y<sub>1</sub>          = g
+>>        a.y<sub>1</sub> + b.x<sub>1</sub> - ceil(a/b).b.y<sub>1</sub>          = g
+>>        a.y<sub>1</sub> + b(x<sub>1</sub> - ceil(a/b).y<sub>1</sub>            = g
 
 </pre>
 comparing this with the equation `a.x + b.y = g` ,
