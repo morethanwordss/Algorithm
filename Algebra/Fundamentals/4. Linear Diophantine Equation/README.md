@@ -10,7 +10,9 @@ There are 4 classical problems on this equation,
 - finding a solution with minimum value of `x + y`
 # The Degenerate Case
 if `a == 0` and `b == 0`, the equation, 
-<pre>0.x + 0.y = c
+<pre>
+   a.x + b.y = c
+>> 0.x + 0.y = c
 >> 0 + 0 = c
 >> c = 0
 </pre>
