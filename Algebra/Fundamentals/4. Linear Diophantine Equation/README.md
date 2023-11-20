@@ -30,3 +30,6 @@ In the equation `a.x + b.y = c`,
 As, `c = a.x + b.y` and `a.x + b.y` is divisble by `gcd(a, b)`, `c` also has to be divisbile by `gcd(a, b)`.
 
 If `c` is not divisible by `gcd(a, b)`, there is no solution to the equation, `a.x + b.y = c`
+
+## Finding One Solution
+From the Extended Euclidean Algorithm we can find the value of `(x', y')` for the equation `a.x' + b.y' = gcd(a, b)`.
