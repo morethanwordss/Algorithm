@@ -26,9 +26,9 @@ Let us assume we found the coefficients _(x<sub>1</sub>, y<sub>1</sub>)_ for `(b
 
 And we want to find the pair `(x, y)` for `(a, b)` : `a * x + b * y = g`
 
-We can represent `a mod b` as `a - ceil(a / b) * b`. And so, substituting `a mod b` with `a - ceil(a / b) * b` gives us:
+We can represent `a mod b` as `a - ceil(a / b) * b`.  And so, substituting `a mod b` with `a - ceil(a / b) * b` gives us:
 
-<pre>
+```
    b * x<sub>1</sub> + (a mod b) * y<sub>1</sub> = g
           
 -> b * x<sub>1</sub> + (a - ceil(<sup>a</sup>/<sub>b</sub>) * b) * y<sub>1</sub> = g
@@ -41,8 +41,8 @@ We can represent `a mod b` as `a - ceil(a / b) * b`. And so, substituting `a mod
           
 -> a * y<sub>1</sub> +  b * x<sub>1</sub> - b * (ceil(<sup>a</sup>/<sub>b</sub>) * y<sub>1</sub>) = g
           
--> a * y<sub>1</sub> +  b (x<sub>1</sub> - * (ceil(<sup>a</sup>/<sub>b</sub>) * y<sub>1</sub>)) = g
-</pre>
+-> a * y<sub>1</sub> +  b * (x<sub>1</sub> - * (ceil(<sup>a</sup>/<sub>b</sub>) * y<sub>1</sub>)) = g
+```
 ```c++
 /* c++ */
 int gcd (int a, int b) {
