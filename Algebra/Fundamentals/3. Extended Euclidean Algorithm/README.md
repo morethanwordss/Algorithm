@@ -38,7 +38,7 @@ We can represent `a mod b` as `a - ceil(a / b).b`.  And so, substituting `a mod 
 comparing this with the equation `a.x + b.y = g` ,
 <pre>
 x = y<sub>1</sub>
-y = x<sub>1</sub> - ceil(<sup>a</sup>/<sub>b</sub>.y<sub>1</sub>)
+y = x<sub>1</sub> - ceil(<sup>a</sup>/<sub>b</sub>).y<sub>1</sub>
 </pre>
 ## Implementation
 ### Extended Euclidean Algorithm (Recursive)
