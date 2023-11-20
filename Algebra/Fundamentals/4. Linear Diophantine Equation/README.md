@@ -54,3 +54,51 @@ and,
 y = y' . k
   = y' . (c / gcd(a, b)
 </pre>
+## Implimentation
+```c++
+/* c++ */
+int gcd(int a, int b, int &x, int &y) {
+    if (b == 0) {
+        x = 1;
+        y = 0;
+        return a;
+    }
+    int x1, y1;
+    int d = gcd(b, a % b, x1, y1);
+    x = y1;
+    y = x1 - y1 * (a / b);
+    return d;
+}
+
+bool find_any_solution(int a, int b, int c, int &x, int &y, int &g) {
+    g = gcd(a, b, x, y);
+    if (c % g) {
+        return false;
+    }
+    x *= c / g;
+    y *= c / g;
+    return true;
+}
+```
+```python
+# Python
+# Outside of the function, declare x = [0], y = [0], g = [0] as python doesn't support pass-by-refference
+def gcd(a, b, x, y):
+    if b == 0:
+        x = 1
+        y = 0
+        return a
+    x1, y1 = 0, 0
+    d = gcd(b, a % b, x1, y1)
+    x[0] = y1
+    y[0] = x1 - y1 * (a // b)
+    return d
+
+def find_any_solution(a, b, c, x, y, g):
+    g[0] = gcd(a, b, x, y)
+    if c % g[0]:
+        return False
+    x[0] *= c // g[0]
+    y[0] *= c // g[0]
+    return True
+```
