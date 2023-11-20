@@ -19,15 +19,14 @@ Starting from these coefficients `(x, y) = (1, 0)` , we can go backwards up th
 
 All we need to do is to figure out how the coefficients `x` and `y` change during the transition from `(a, b)` to `(b, a mod b)` .
 
-Let us assume we found the coefficients _(x<sub>1</sub>, y<sub>1</sub>)_ for `(b, a mod b)` :
+Let us assume we found the coefficients _(x<sub>1</sub>, y<sub>1</sub>)_ for `(b, a mod b)` : `b * x<sub>1</sub> + (a mod b) * y<sub>1</sub> = g`
+<br>and we want to find the pair `(x, y)` for `(a, b)` : `a * x + b * y = g`
+We can represent `a mod b` as `a - (a // b) * b` , where `//` denotes the integer division.
+Now, Substituting `a mod b` with `a - (a // b) * b` gives us:
 <pre>
-b * x<sub>1</sub> + (a mod b) * y<sub>1</sub> = g
+   b * x<sub>1</sub> + (a mod b) * y<sub>1</sub> = g
+-> b * x<sub>1</sub> + {a - (a // b) * b} * y<sub>1</sub> = g
 </pre>
-And we want to finf the pair `(x, y)` for `(a, b)` :
-<pre>
-a * x + b * y = g
-</pre>
-We can represent `a mod b` as `a - (a // b) * b` , where `//` denotes as the integer division.
 ```c++
 /* c++ */
 int gcd (int a, int b) {
