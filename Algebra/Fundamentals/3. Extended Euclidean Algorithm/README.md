@@ -41,12 +41,12 @@ We can represent `a mod b` as `a - ceil(a / b) * b`.  And so, substituting `a mo
           
 -> a * y<sub>1</sub> +  b * x<sub>1</sub> - b * (ceil(<sup>a</sup>/<sub>b</sub>) * y<sub>1</sub>) = g
           
--> a * y<sub>1</sub> +  b * (x<sub>1</sub> - * (ceil(<sup>a</sup>/<sub>b</sub>) * y<sub>1</sub>)) = g
+-> a * y<sub>1</sub> +  b * (x<sub>1</sub> - (ceil(<sup>a</sup>/<sub>b</sub>) * y<sub>1</sub>)) = g
 </pre>
 comparing this with the equation `a * x + b * y = g` ,
 <pre>
 x = y<sub>1</sub>
-y = (x<sub>1</sub> - * (ceil(<sup>a</sup>/<sub>b</sub>) * y<sub>1</sub>))
+y = (x<sub>1</sub> - (ceil(<sup>a</sup>/<sub>b</sub>) * y<sub>1</sub>))
 </pre>
 ## Implementation
 ### Euclidean ALgorithm for GCD (Recursive)
