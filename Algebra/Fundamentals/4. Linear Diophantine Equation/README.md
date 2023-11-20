@@ -2,8 +2,7 @@
 ## Introduction
 A Linear Diophantine Equation is an equation of the general form,
 <pre>a.x + b.y = c </pre>
-Where `a`, `b`, `c` are given integers, and `x`, `y` are unknown integers.
-
+Where `a`, `b`, `c` are given integers, and `x`, `y` are unknown integers. <br>
 There are 4 classical problems on this equation, 
 - Finding one solution
 - Finding all solution
@@ -27,15 +26,12 @@ In the equation `a.x + b.y = c`,
 - `b.y` is divisible by `gcd(a, b)`
 - `a.x + b.y` is divisble by `gcd(a, b)`
   
-As, `c = a.x + b.y` and `a.x + b.y` is divisble by `gcd(a, b)`, `c` also has to be divisbile by `gcd(a, b)`.
-
+As, `c = a.x + b.y` and `a.x + b.y` is divisble by `gcd(a, b)`, `c` also has to be divisbile by `gcd(a, b)`. <br>
 If `c` is not divisible by `gcd(a, b)`, there is no solution to the equation, `a.x + b.y = c`
 
 ## Finding One Solution
-From the Extended Euclidean Algorithm we can find the value of `(x', y')` for the equation `a.x' + b.y' = gcd(a, b)`.
-
-As `c` is divisible by `gcd(a, b) = 0`,
-
+From the Extended Euclidean Algorithm we can find the value of `(x', y')` for the equation `a.x' + b.y' = gcd(a, b)`. <br>
+As `c` is divisible by `gcd(a, b) = 0`, <br>
 Let `k = c / gcd(a, b)`,
 <pre>
    a.x' + b.y'       = gcd(a, b)
@@ -43,7 +39,6 @@ Let `k = c / gcd(a, b)`,
 >> a.x'.k + b.y'.k   = gcd(a, b) . k
 >> a.x'.k + b.y'.k   = c
 </pre>
-
 Comparing this with the equation `a.x + b.y = c`,
 <pre>
 x = x' . k
