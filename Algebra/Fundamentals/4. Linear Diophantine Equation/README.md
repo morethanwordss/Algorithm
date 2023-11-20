@@ -18,13 +18,14 @@ if `a == 0` and `b == 0`, the equation,
 </pre>
 has no solution if `c != 0` and has infinite many solution if `c == 0` .
 # Finding many solution
-In the equation `a.x + b.y = c` ,
+In the equation `a.x + b.y = c`,
 - `a` is divisible by `gcd(a, b)`
 - `a.x` is disible by `gcd(a, b)`
 - `b` is divisible by `gcd(a, b)`
-- `b.y` is disible by `gcd(a, b)`
+- `b.y` is divisible by `gcd(a, b)`
 - `a.x + b.y` is divisble by `gcd(a, b)`
   
-As, `c = a.x + b.y` and `a.x + b.y` is divisble by `gcd(a, b)`, `c` also has to be divisbile by `gcd(a, b)` .
-If `c` is not divisible by `gcd(a, b)` . There is no solution to the equation, `a.x + b.y = c`
+As, `c = a.x + b.y` and `a.x + b.y` is divisble by `gcd(a, b)`, `c` also has to be divisbile by `gcd(a, b)`.
+
+If `c` is not divisible by `gcd(a, b)`, there is no solution to the equation, `a.x + b.y = c`
 
