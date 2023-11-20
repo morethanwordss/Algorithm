@@ -20,9 +20,10 @@ has no solution if `c != 0` and has infinite many solution if `c == 0` .
 # Finding many solution
 In the equation `a.x + b.y = c` ,
 - `a` is divisible by `gcd(a, b)`
--- `a.x` is disible by `gcd(a, b)`
+- `a.x` is disible by `gcd(a, b)`
+  
 - `b` is divisible by `gcd(a, b)`
--- `b.y` is disible by `gcd(a, b)`
+- `b.y` is disible by `gcd(a, b)`
   
 Therefore, `a.x + b.y` is also divisble by `gcd(a, b)`
 As, `c = a.x + b.y` and `a.x + b.y` is divisble by `gcd(a, b)`, `c` also has to be divisbile by `gcd(a, b)` .
