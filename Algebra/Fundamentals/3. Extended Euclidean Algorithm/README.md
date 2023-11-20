@@ -13,7 +13,7 @@ gcd(a, b) = a                If b == 0
 </pre>
 We can see that the algorithm ends with `b == 0` and `a = g`.
 
-With this information we can easily find the value of the equation,
+With this information we can easily find the value of `x` and `y` for `(a, b)` from the equation,
 <pre>
    a * x + b * y = g
 >> g * 1 + 0 * 0 = g
