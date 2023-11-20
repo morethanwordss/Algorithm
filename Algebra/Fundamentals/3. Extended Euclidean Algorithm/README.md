@@ -9,7 +9,7 @@ If we recall the Euclidean Algorithm,
 gcd(a, b) = a                If b == 0
           = gcd(b, a mod b)  Otherwise
 </pre>
-We can see that the algorithm ends with `b == 0` and `a = g`. With this information we can easily find the value of the equation `a * x + b * y = g`:
+We can see that the algorithm ends with `b == 0` and `a = g`. With this information we can easily find the value of the equation:<bre>`a * x + b * y = g`:
 <pre>g * 1 + 0 * 0 = g</pre>
 ```c++
 /* c++ */
