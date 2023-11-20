@@ -17,7 +17,7 @@ if `a == 0` and `b == 0`, the equation,
 >> 0 + 0 = c
 >> c = 0
 </pre>
-has no solution if `c != 0` and has infinite many solution if `c == 0` .
+Therefore, if `a == 0` and `b == 0`, the equation `a.x + b.y = c` has no solution if `c != 0` and has infinite many solution if `c == 0` .
 ## Finding many solution
 In the equation `a.x + b.y = c`,
 - `a` is divisible by `gcd(a, b)`
