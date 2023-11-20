@@ -23,7 +23,7 @@ Starting from these coefficients `(x, y) = (1, 0)` , we can go backwards up th
 All we need to do is to figure out how the coefficients `x` and `y` change during the transition from `(b, a mod b)` to `(a, b)` as we go backwards up the recusrsive calls.
 
 We want to find the pair `(x, y)` for `(a, b)` from the equation `a * x + b * y = g` assuming the coefficients `(x1, y1)` for `(b, a mod b)`.
-For the coefficient `(x1, y1)` for `(a, b)` , the Equation is,  <pre>b * x<sub>1</sub> + (a mod b) * y<sub>1</sub> = g</pre>
+For the coefficient `(x1, y1)` for `(b, a mod b)` , the Equation is,  <pre>b * x<sub>1</sub> + (a mod b) * y<sub>1</sub> = g</pre>
 
 And we want to find the pair `(x, y)` for `(a, b)` : `a * x + b * y = g`
 
