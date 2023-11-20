@@ -33,3 +33,20 @@ If `c` is not divisible by `gcd(a, b)`, there is no solution to the equation, `a
 
 ## Finding One Solution
 From the Extended Euclidean Algorithm we can find the value of `(x', y')` for the equation `a.x' + b.y' = gcd(a, b)`.
+
+As `c` is divisible by `gcd(a, b) = 0`,
+<pre>
+Let, k = c / gcd(a, b)
+Therefore, 
+   a.x' + b.y'       = gcd(a, b)
+>> (a.x' + b.y') . k = gcd(a, b) . k
+>> a.x'.k + b.y'.k   = gcd(a, b) . k
+>> a.x'.k + b.y'.k   = c
+
+Comparing this with the equation a.x + b.y = c, 
+x = x' . k
+  = x' . (c / gcd(a, b))
+and, 
+y = y' . k
+  = y' . (c / gcd(a, b)
+</pre>
