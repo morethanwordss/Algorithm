@@ -3,7 +3,7 @@
 While the Euclidean Algorithm calculates only the GCD of two integers `a` and `b`, the the extended version also calculates such coefficients `x` and `y` for which:
 <pre>a * x + b * y = gcd(a, b)</pre>
 ## Algorithm
-Lets denote gcd(a, b) with g: <pre>a * x + b * y = g</pre>
+Lets denote `gcd(a, b)` with `g`: <pre>a * x + b * y = g</pre>
 If we recall the Euclidean Algorithm, 
 <pre>
 gcd(a, b) = a                If b == 0
