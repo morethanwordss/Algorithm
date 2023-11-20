@@ -102,3 +102,22 @@ def find_any_solution(a, b, c, x, y, g):
     y[0] *= c // g[0]
     return True
 ```
+## Finding All Solution
+Let the base solution for the equation `a.x + b.y = c` is `(x1, y1)`. Now,
+<pre>
+   a.x<sub>0</sub> + b.y<sub>0</sub> = c
+>> a.x<sub>0</sub> + b.y<sub>0</sub> + ((a.b) / g) - ((a.b) / g) = c
+>> a.x<sub>0</sub> + ((a.b) / g) + b.y<sub>0</sub> - ((a.b) / g) = c
+>> a(x<sub>0</sub> + b/g) + b(y<sub>0</sub> - b/g) = c
+>> a.x<sub>1</sub> + b.y<sub>1</sub> = c
+</pre>
+Therefore, `(x1, y1)` is also a solution for the equation `a.x + b.y = c`, where,
+<pre>
+xx<sub>1</sub> = x<sub>0</sub> + b/g
+yx<sub>2</sub> = y<sub>0</sub> - b/g
+</pre>
+Notice, this process can repeated again. So, the general form of all the solution is,
+<pre>
+x<sub>k</sub> = x<sub>0</sub> + (b/g) . k
+y<sub>k</sub> = y<sub>0</sub> - (b/g) . k
+</pre>
