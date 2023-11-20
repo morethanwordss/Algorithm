@@ -7,7 +7,7 @@ There are 4 classical problems on this equation,
 - Finding one solution
 - Finding all solution
 - Finding the number of solutions and the solutions themselves in a given interval
-- finding a solution with minimum value of `x + y`
+- Finding a solution with minimum value of `x + y`
 ## Analysis
 >> If a == 0 and b == 0
 <pre>
@@ -115,16 +115,39 @@ Let the base solution for the equation `a.x + b.y = c` is `(x1, y1)`. Now,
    a.x<sub>0</sub> + b.y<sub>0</sub> = c
 >> a.x<sub>0</sub> + b.y<sub>0</sub> + ((a.b) / g) - ((a.b) / g) = c
 >> a.x<sub>0</sub> + ((a.b) / g) + b.y<sub>0</sub> - ((a.b) / g) = c
->> a(x<sub>0</sub> + b/g) + b(y<sub>0</sub> - b/g) = c
+>> a(x<sub>0</sub> + b/g) + b(y<sub>0</sub> - a/g) = c
 >> a.x<sub>1</sub> + b.y<sub>1</sub> = c
 </pre>
 Therefore, `(x1, y1)` is also a solution for the equation `a.x + b.y = c`, where,
 <pre>
 x<sub>1</sub> = x<sub>0</sub> + b/g
-y<sub>1</sub> = y<sub>0</sub> - b/g
+y<sub>1</sub> = y<sub>0</sub> - a/g
 </pre>
 Notice, this process can be repeated again. So, the general form of all the solution is,
 <pre>
 x<sub>k</sub> = x<sub>0</sub> + (b/g) . k
-y<sub>k</sub> = y<sub>0</sub> - (b/g) . k
+y<sub>k</sub> = y<sub>0</sub> - (a/g) . k
+</pre>
+## Finding a solution with minimum value of (x + y)
+We know that,
+<pre>
+x<sub>k</sub> = x<sub>0</sub> + (b/g) . k
+y<sub>k</sub> = y<sub>0</sub> - (a/g) . k
+</pre>
+Now, 
+<pre>
+  x<sub>k</sub> + y<sub>k</sub>
+= x<sub>0</sub> + (b/g) . k + y<sub>0</sub> - (a/g) . k
+= x<sub>0</sub> + k + y<sub>0</sub> + (b/g . k) - (a/g . k)
+= x<sub>0</sub> + k + y<sub>0</sub> + k . (b/g - a/g)
+= x<sub>0</sub> + k + y<sub>0</sub> + k . (b - a) / g
+</pre>
+For the minimum value of `(x + y)`, `k . (b - a) / g` has to be minimum
+<pre>
+if b > a:
+   for (k = minimum) k . (b - a) / g = minimum
+if b < a:
+   for (k = maximum) k . (b - a) / g = minimum
+if b == a:
+   for (any value of k) k . (b - a) / g = 0 
 </pre>
