@@ -19,6 +19,7 @@ There are 4 classical problems on this equation,
 </pre>
 Therefore, if `a == 0` and `b == 0`, the equation `a.x + b.y = c` has no solution if `c != 0` and has infinite many solution if `c == 0` .
 >> If a != 0 and b != 0
+
 In the equation `a.x + b.y = c`,
 - `a` is divisible by `gcd(a, b)`
 - `a.x` is disible by `gcd(a, b)`
