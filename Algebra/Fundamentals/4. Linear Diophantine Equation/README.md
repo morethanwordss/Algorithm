@@ -16,9 +16,18 @@ There are 4 classical problems on this equation,
 >> 0 + 0 = c
 >> c = 0
 </pre>
-Therefore, if `a == 0` and `b == 0`, the equation `a.x + b.y = c` has no solution if `c != 0` and has infinite many solution if `c == 0` .
+Therefore, if `a == 0` and `b == 0`, the equation `a.x + b.y = c` has no solution if `c != 0` and has many solution if `c == 0` .
+>> If a == 0 or a == 0
+If a == 0, the equation,
+<pre>
+   a.x + b.y = c
+>> 0.x + b.y = c
+>> b.y = c
+>> y = c/b
+x can be any integer
+</pre>
+In the same way, if `b == 0`, `x = c/a` and `y` can be any integer.  
 >> If a != 0 and b != 0
-
 In the equation `a.x + b.y = c`,
 - `a` is divisible by `gcd(a, b)`
 - `a.x` is disible by `gcd(a, b)`
