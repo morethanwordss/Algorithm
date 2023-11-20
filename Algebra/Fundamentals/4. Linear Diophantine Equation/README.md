@@ -103,6 +103,7 @@ def find_any_solution(a, b, c, x, y, g):
     return True
 ```
 ## Finding All Solution
+Lets denote `gcd(a, b)` with `g` and <br>
 Let the base solution for the equation `a.x + b.y = c` is `(x1, y1)`. Now,
 <pre>
    a.x<sub>0</sub> + b.y<sub>0</sub> = c
