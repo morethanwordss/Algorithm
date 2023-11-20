@@ -17,7 +17,8 @@ There are 4 classical problems on this equation,
 >> c = 0
 </pre>
 Therefore, if `a == 0` and `b == 0`, the equation `a.x + b.y = c` has no solution if `c != 0` and has many solution if `c == 0` .
->> If a == 0 or b == 0 <br>
+>> If a == 0 or b == 0
+
 If a == 0, the equation,
 <pre>
    a.x + b.y = c
