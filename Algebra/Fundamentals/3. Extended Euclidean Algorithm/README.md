@@ -24,7 +24,7 @@ All we need to do is to figure out how the coefficients `x` and `y` change durin
 
 The Equation for coefficients `(x, y)` for `(a, b)` is `a * x + b * y = g`. 
 
-So, assuming the coefficients _(x<sub>1</sub>, y<sub>1</sub>)_ for `(b, a mod b)` , the Equation stands,  <pre>b * x<sub>1</sub> + (a mod b) * y<sub>1</sub> = g</pre>
+So, assuming the coefficients `(x1, y1)` for `(b, a mod b)` , the Equation stands,  <pre>b * x<sub>1</sub> + (a mod b) * y<sub>1</sub> = g</pre>
 
 And we want to find the pair `(x, y)` for `(a, b)` : `a * x + b * y = g`
 
