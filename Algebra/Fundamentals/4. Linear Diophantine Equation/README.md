@@ -138,9 +138,9 @@ Now,
 <pre>
   x<sub>k</sub> + y<sub>k</sub>
 = x<sub>0</sub> + (b/g) . k + y<sub>0</sub> - (a/g) . k
-= x<sub>0</sub> + k + y<sub>0</sub> + (b/g . k) - (a/g . k)
-= x<sub>0</sub> + k + y<sub>0</sub> + k . (b/g - a/g)
-= x<sub>0</sub> + k + y<sub>0</sub> + k . (b - a) / g
+= x<sub>0</sub> + y<sub>0</sub> + (b/g . k) - (a/g . k)
+= x<sub>0</sub> + y<sub>0</sub> + k . (b/g - a/g)
+= x<sub>0</sub> + y<sub>0</sub> + k . (b - a) / g
 </pre>
 For the minimum value of `(x + y)`, `k . (b - a) / g` has to be minimum
 <pre>
