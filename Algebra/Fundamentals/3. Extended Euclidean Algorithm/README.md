@@ -25,8 +25,6 @@ All we need to do is to figure out how the coefficients `x` and `y` change durin
 We want to find the pair `(x, y)` for `(a, b)` from the equation `a * x + b * y = g` assuming the coefficients `(x1, y1)` for `(b, a mod b)`.
 For the coefficient `(x1, y1)` for `(b, a mod b)` , the Equation is,  <pre>b * x<sub>1</sub> + (a mod b) * y<sub>1</sub> = g</pre>
 
-And we want to find the pair `(x, y)` for `(a, b)` : `a * x + b * y = g`
-
 We can represent `a mod b` as `a - ceil(a / b) * b`.  And so, substituting `a mod b` with `a - ceil(a / b) * b` gives us:
 
 <pre>
