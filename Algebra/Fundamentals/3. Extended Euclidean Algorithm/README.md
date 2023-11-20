@@ -16,7 +16,7 @@ We can see that the algorithm ends with `b == 0` and `a = g`.
 With this information we can easily find the value of the equation,
 <pre>
    a * x + b * y = g
--> g * 1 + 0 * 0 = g
+>> g * 1 + 0 * 0 = g
 </pre>
 Starting from these coefficients `(x, y) = (1, 0)` , we can go backwards up the recursive calls.
 
