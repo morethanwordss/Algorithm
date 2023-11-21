@@ -1,44 +1,39 @@
 # Linear Diophantine Equation
-## Introduction
-A Linear Diophantine Equation is an equation of the general form,
 <pre>a.x + b.y = c </pre>
-Where `a`, `b`, `c` are given integers, and `x`, `y` are unknown integers. <br>
-There are 4 classical problems on this equation, 
-- Finding one solution
-- Finding all solution
-- Finding the number of solutions and the solutions themselves in a given interval
-- Finding a solution with minimum value of `x + y`
-## Analysis
->> If a == 0 and b == 0
+
+## Theory
 <pre>
+if (a == 0 && b == 0):
+   
    a.x + b.y = c
 >> 0.x + 0.y = c
 >> 0 + 0 = c
 >> c = 0
-</pre>
-Therefore, if `a == 0` and `b == 0`, the equation `a.x + b.y = c` has no solution if `c != 0` and has many solution if `c == 0` .
+So, (a == 0 && b == 0 && c != 0) has no soln
 >> If a == 0 or b == 0
-
-If a == 0, the equation,
-<pre>
-   a.x + b.y = c
->> 0.x + b.y = c
->> b.y = c
->> y = c/b
-x can be any integer
 </pre>
-In the same way, if `b == 0`, `x = c/a` and `y` can be any integer.  
->> If a != 0 and b != 0
 
-In the equation `a.x + b.y = c`,
-- `a` is divisible by `gcd(a, b)`
-- `a.x` is disible by `gcd(a, b)`
-- `b` is divisible by `gcd(a, b)`
-- `b.y` is divisible by `gcd(a, b)`
-- `a.x + b.y` is divisble by `gcd(a, b)`
-  
-As, `c = a.x + b.y` and `a.x + b.y` is divisble by `gcd(a, b)`, `c` also has to be divisbile by `gcd(a, b)`. <br>
-If `c` is not divisible by `gcd(a, b)`, there is no solution to the equation, `a.x + b.y = c`
+<pre>
+if (a == 0 || b == 0):
+   
+   a.x + b.y = c
+>> 0.x + b.y = c [let a == 0 in this case]
+>> b.y = c
+>> y = c / b
+   
+if (a == 0) y = c / b;
+if (b == 0) x = c / a;
+</pre>
+
+<pre>
+if (a != 0 and b != 0):
+   
+(a.x + b.y) % g == 0 because,'
+i)  a.x % g == 0
+ii) b.y % g == 0
+
+So, (c % g != 0) has no soln
+</pre>
 
 ## Finding One Solution
 From the Extended Euclidean Algorithm we can find the value of `(x', y')` for the equation `a.x' + b.y' = gcd(a, b)`. <br>
