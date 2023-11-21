@@ -161,6 +161,7 @@ long long fib(int n) {
     } };
     return matpow(base, n).mat[0][1];
 }
+```
 ```python
 # Python
 class Matrix:
