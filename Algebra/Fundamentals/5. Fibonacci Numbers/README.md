@@ -34,6 +34,6 @@ _GCD Identity:_
 <pre>
 GCD(F<sub>m</sub> , F<sub>n</sub>) = F<sub>GCD(m, n)</sub>
 </pre>
-_Fibonacci numbers are the worst possible inputs for Euclidean algorithm _
+_Fibonacci numbers are the worst possible inputs for Euclidean algorithm_
 
 
