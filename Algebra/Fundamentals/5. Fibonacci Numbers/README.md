@@ -211,3 +211,8 @@ pair<int, int> fib (int n) {
 }
 ```
 The above code returns F<sub>n</sub> and F<sub>n+1</sub> as a pair
+### Periodicity modulo p
+The Fibonacci Series modulo p is periodic.
+
+<pre>
+F<sub>0</sub> mod p, F<sub>1</sub> mod p, F<sub>2</sub> mod p, F<sub>2</sub> mod p, F<sub>3</sub> mod p, ..., F<sub>0</sub> mod p,  
