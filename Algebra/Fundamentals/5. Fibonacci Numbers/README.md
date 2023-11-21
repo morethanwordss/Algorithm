@@ -210,9 +210,23 @@ pair<int, int> fib (int n) {
         return {c, d};
 }
 ```
+```python
+# Python
+def fib(n):
+    if n == 0:
+        return (0, 1)
+
+    p = fib(n >> 1)
+    c = p[0] * (2 * p[1] - p[0])
+    d = p[0] * p[0] + p[1] * p[1]
+    
+    if n & 1:
+        return (d, c + d)
+    else:
+        return (c, d)
+```
 The above code returns F<sub>n</sub> and F<sub>n+1</sub> as a pair
 ### Periodicity modulo p
-The Fibonacci Series modulo p is periodic.
-
 <pre>
-F<sub>0</sub> mod p, F<sub>1</sub> mod p, F<sub>2</sub> mod p, F<sub>2</sub> mod p, F<sub>3</sub> mod p, ..., F<sub>0</sub> mod p,  
+F<sub>0</sub> mod p, F<sub>1</sub> mod p, F<sub>2</sub> mod p, F<sub>2</sub> mod p, F<sub>3</sub> mod p, ... 
+this sequence is periodic
