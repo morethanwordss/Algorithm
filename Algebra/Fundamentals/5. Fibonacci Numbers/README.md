@@ -60,5 +60,20 @@ Again, notice the binary code representation ends with an additional `1` at the 
  9   = 8 + 1         = F6 + F2         = (100011)<sub>F</sub>
 19   = 13 + 5 + 1    = F7 + F5 + F2    = (1001011)<sub>F</sub>
 </pre>
-
+The encoding of an integer `n` can be done with a simple greedy algorithm.
+<pre>
+1. Iterate through the Fibonacci numbers from the largest to the smallest until you find one less than or equal to n .
+2. Suppose this number was F<sub>i</sub> .
+   Subtract F<sub>i</sub> from n and put a 1 in the (i - 2) position of the code word (indexing from 0 from the leftmost to the rightmost bit).
+3. Repeat until there is no remainder.
+4. Add a final 1 to the codeword to indicate its end.
+Example:
+13 = F<sub>7</sub> + F<sub>5</sub> + F<sub>2</sub>
+The format: <pre>b<sub>0</sub>b<sub>1</sub>b<sub>1</sub>b<sub>2</sub>...b<sub>n</sub>
+For F<sub>7</sub>, b<sub>7-2</sub> = b<sub>5</sub> = 1
+For F<sub>5</sub>, b<sub>5-2</sub> = b<sub>3</sub> = 1
+For F<sub>2</sub>, b<sub>2-2</sub> = b<sub>0</sub> = 1
+Resulting Code: 100101
+After adding a final 1 to the code to indicate its end: 1001011
+</pre>
 
