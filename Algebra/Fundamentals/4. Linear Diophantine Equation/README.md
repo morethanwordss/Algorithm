@@ -36,116 +36,61 @@ So, (c % g != 0) has no soln
 </pre>
 
 ## Finding One Solution
-From the Extended Euclidean Algorithm we can find the value of `(x', y')` for the equation `a.x' + b.y' = gcd(a, b)`. <br>
-As `c` is divisible by `gcd(a, b) = 0`, <br>
-Let `k = c / gcd(a, b)`,
 <pre>
-   a.x' + b.y'       = gcd(a, b)
->> (a.x' + b.y') . k = gcd(a, b) . k
->> a.x'.k + b.y'.k   = gcd(a, b) . k
->> a.x'.k + b.y'.k   = c
+   a.x' + b.y'       = g
+>> (a.x' + b.y').k   = g.k
+>> a.x'.k + b.y'.k   = g.k
+>> a.x'.k + b.y'.k   = c     [let g.k == c]
+   
+x   = x'.k   = x'.(c/g)
+y   = y'.k   = y'.(c/g)
 </pre>
-Comparing this with the equation `a.x + b.y = c`,
-<pre>
-x = x' . k
-  = x' . (c / gcd(a, b))
-</pre>
-and, 
-<pre>
-y = y' . k
-  = y' . (c / gcd(a, b)
-</pre>
-## Implimentation
 ```c++
-/* c++ */
 int gcd(int a, int b, int &x, int &y) {
     if (b == 0) {
         x = 1;
         y = 0;
         return a;
     }
-    int x1, y1;
-    int d = gcd(b, a % b, x1, y1);
-    x = y1;
-    y = x1 - y1 * (a / b);
+    int _x, _y;
+    int d = gcd(b, a % b, _x, _y);
+    x = _y;
+    y = _x - _y * (a / b);
     return d;
 }
 
-bool find_any_solution(int a, int b, int c, int &x, int &y, int &g) {
+bool gcdSoln(int a, int b, int c, int &x, int &y, int &g) {
     g = gcd(a, b, x, y);
-    if (c % g) {
-        return false;
-    }
+    if (c % g != 0) return false;
     x *= c / g;
     y *= c / g;
     return true;
 }
 ```
-```python
-# Python
-# Outside of the function, declare x = [0], y = [0], g = [0] as python doesn't support pass-by-refference
-def gcd(a, b, x, y):
-    if b == 0:
-        x = 1
-        y = 0
-        return a
-    x1, y1 = 0, 0
-    d = gcd(b, a % b, x1, y1)
-    x[0] = y1
-    y[0] = x1 - y1 * (a // b)
-    return d
-
-def find_any_solution(a, b, c, x, y, g):
-    g[0] = gcd(a, b, x, y)
-    if c % g[0]:
-        return False
-    x[0] *= c // g[0]
-    y[0] *= c // g[0]
-    return True
-```
 ## Finding All Solution
-Lets denote `gcd(a, b)` with `g` and <br>
-Let the base solution for the equation `a.x + b.y = c` is `(x1, y1)`. Now,
 <pre>
    a.x<sub>0</sub> + b.y<sub>0</sub> = c
 >> a.x<sub>0</sub> + b.y<sub>0</sub> + ((a.b) / g) - ((a.b) / g) = c
 >> a.x<sub>0</sub> + ((a.b) / g) + b.y<sub>0</sub> - ((a.b) / g) = c
 >> a(x<sub>0</sub> + b/g) + b(y<sub>0</sub> - a/g) = c
 >> a.x<sub>1</sub> + b.y<sub>1</sub> = c
+
+Solution 0: (x<sub>0</sub> + 0 . b/g, y<sub>0</sub> - 0 . a/g)
+Solution 1: (x<sub>0</sub> + 1 . b/g, y<sub>0</sub> - 1 . a/g)
+Solution 2: (x<sub>0</sub> + 2 . b/g, y<sub>0</sub> - 2 . a/g)
+..............................................................
+Solution k: (x<sub>0</sub> + k . b/g, y<sub>0</sub> - k . a/g)
 </pre>
-Therefore, `(x1, y1)` is also a solution for the equation `a.x + b.y = c`, where,
-<pre>
-x<sub>1</sub> = x<sub>0</sub> + b/g
-y<sub>1</sub> = y<sub>0</sub> - a/g
-</pre>
-Notice, this process can be repeated again. So, the general form of all the solution is,
-<pre>
-x<sub>k</sub> = x<sub>0</sub> + (b/g) . k
-y<sub>k</sub> = y<sub>0</sub> - (a/g) . k
-</pre>
+
 ## Finding a solution with minimum value of (x + y)
-We know that,
-<pre>
-x<sub>k</sub> = x<sub>0</sub> + (b/g) . k
-y<sub>k</sub> = y<sub>0</sub> - (a/g) . k
-</pre>
-Now, 
 <pre>
   x<sub>k</sub> + y<sub>k</sub>
-= x<sub>0</sub> + (b/g) . k + y<sub>0</sub> - (a/g) . k
-= x<sub>0</sub> + y<sub>0</sub> + (b/g . k) - (a/g . k)
+= x<sub>0</sub> + k . (b/g) + y<sub>0</sub> - k . (a/g)
+= x<sub>0</sub> + y<sub>0</sub> + (k . b/g) - (k . a/g)
 = x<sub>0</sub> + y<sub>0</sub> + k . (b/g - a/g)
 = x<sub>0</sub> + y<sub>0</sub> + k . (b - a) / g
-</pre>
-For the minimum value of `(x + y)`, `k . (b - a) / g` has to be minimum
-<pre>
-if b > a:
-   for (k = minimum):
-      k . (b - a) / g will be minimum
-if b < a:
-   for (k = maximum):
-      k . (b - a) / g will be minimum
-if b == a:
-   for (any value of k):
-      k . (b - a) / g = 0 
+
+if (b > a) (x + y)<sub>min</sub> = k<sub>min</sub>; [less pos]
+if (b < a) (x + y)<sub>min</sub> = k<sub>max</sub>; [maxx neg]
+if (b == a) all same
 </pre>
