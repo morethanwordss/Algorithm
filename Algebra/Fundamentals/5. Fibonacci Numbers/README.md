@@ -85,7 +85,7 @@ After adding a final 1 to the code to indicate its end: 1001011
 ## N<sup>th</sup> Fibonacci Number
 ### Binet's Formula
 <pre>
-Let c<sub>1</sub>  = (1 + sqrt(5)) / 2
+Let c<sub>1</sub> = (1 + sqrt(5)) / 2
 and c<sub>2</sub> = (1 - sqrt(5)) / 2
 F<sub>n</sub> = (c<sub>1</sub><sup>n</sup> - c<sub>2</sub><sup>n</sup>) / sqrt(5) ..... (Binet's Formula)
 </pre>
@@ -192,6 +192,22 @@ def fib(n):
 ```
 ### Fast Doubling Method
 Expanding the above matrix represntation for `n = 2 . k` , <br>
-                  <img style="vertical-align:middle" width="329" alt="Screenshot 2023-11-21 221957" src="https://github.com/t0-ji/Algorithm/assets/108709544/1dd6e783-0feb-44fa-a069-dd78239d899c"> <br>
+<img width="329" alt="Screenshot 2023-11-21 221957" src="https://github.com/t0-ji/Algorithm/assets/108709544/1dd6e783-0feb-44fa-a069-dd78239d899c"> <br>
 We can find these simpler equation, <br>
-                  <img width="298" alt="Screenshot 2023-11-21 223132" src="https://github.com/t0-ji/Algorithm/assets/108709544/b4cb2aa0-0fe7-4b2d-abfb-d81fbb12bf27">
+<img width="298" alt="Screenshot 2023-11-21 223132" src="https://github.com/t0-ji/Algorithm/assets/108709544/b4cb2aa0-0fe7-4b2d-abfb-d81fbb12bf27"> <br>
+```c++
+/* c++ */
+pair<int, int> fib (int n) {
+    if (n == 0)
+        return {0, 1};
+
+    auto p = fib(n >> 1);
+    int c = p.first * (2 * p.second - p.first);
+    int d = p.first * p.first + p.second * p.second;
+    if (n & 1)
+        return {d, c + d};
+    else
+        return {c, d};
+}
+```
+The above code returns F<sub>n</sub> and F<sub>n+1</sub> as a pair
