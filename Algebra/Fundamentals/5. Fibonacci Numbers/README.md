@@ -26,10 +26,10 @@ _If_ `k == n`,
 </pre>
 _Therefore, we can say that_,
 <pre>
-For any positive integer k:
+For any positive integer k :
    F<sub>nk</sub> is a multiple of F<sub>n</sub>
    
-If F<sub>m</sub> is a multiple of F<sub>n</sub>:
+If F<sub>m</sub> is a multiple of F<sub>n</sub> :
    m is a multiple of n
 </pre>
 _GCD Identity:_
