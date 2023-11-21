@@ -95,4 +95,26 @@ So, this can be written strictly as,
 F<sub>n</sub> = round(c<sub>1</sub> / sqrt(5))
 </pre>
 As these two formulas would require very high accuracy when working with fractional numbers, they are of little use in practical calculations.
-
+### In Linear Time
+```c++
+/* c++ */
+int fib(int n) {
+    int a = 0;
+    int b = 1;
+    for (int i = 0; i < n; i++) {
+        int tmp = a + b;
+        a = b;
+        b = tmp;
+    }
+    return a;
+}
+```
+```python
+# Python
+def fib(n):
+    a, b = 0, 1
+    for i in range(n):
+        tmp = a + b
+        a, b = b, tmp
+    return a
+```
