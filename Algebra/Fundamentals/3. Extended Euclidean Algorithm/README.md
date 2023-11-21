@@ -19,10 +19,10 @@ Substituting `a mod b` with `a - ceil(a / b).b`,
 
 <pre>
           b.x' + (a mod b).y'               = g          
->>        b.x' + (a - ceil(a/b).b).y'       = g          
->>        b.x' + a.y' - ceil(a/b).b.y'      = g
->>        a.y' + b.x' - ceil(a/b).b.y'      = g
->>        a.y' + b(x' - ceil(a/b).y')       = g
+>>        b.x' + (a - ceil(a / b).b).y'       = g          
+>>        b.x' + a.y' - ceil(a / b).b.y'      = g
+>>        a.y' + b.x' - ceil(a / b).b.y'      = g
+>>        a.y' + b(x' - ceil(a / b).y')       = g
 </pre>
 <pre>
 x = y'
