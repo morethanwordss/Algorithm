@@ -191,7 +191,7 @@ def fib(n):
     return matpow(base, n).mat[0][1]
 ```
 ### Fast Doubling Method
-Expanding the above matrix represntation for `n = 2 . k` , <br>
+Expanding the above matrix represntation for `n = 2 . k` , 
 <img width="329" alt="Screenshot 2023-11-21 221957" src="https://github.com/t0-ji/Algorithm/assets/108709544/1dd6e783-0feb-44fa-a069-dd78239d899c"> <br>
-We can find these simpler equation, <br>
+We can find these simpler equation,
 <img width="298" alt="Screenshot 2023-11-21 223132" src="https://github.com/t0-ji/Algorithm/assets/108709544/b4cb2aa0-0fe7-4b2d-abfb-d81fbb12bf27">
