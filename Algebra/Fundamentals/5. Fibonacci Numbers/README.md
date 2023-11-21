@@ -117,4 +117,6 @@ def fib(n):
         tmp = a + b
         a, b = b, tmp
     return a
+<img width="189" alt="Screenshot 2023-11-21 215833" src="https://github.com/t0-ji/Algorithm/assets/108709544/6b0b9e36-ac7f-47b1-b797-60e30035fa75">
+
 ```
