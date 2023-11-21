@@ -69,7 +69,7 @@ The encoding of an integer `n` can be done with a simple greedy algorithm.
 4. Add a final 1 to the codeword to indicate its end.
 Example:
 13 = F<sub>7</sub> + F<sub>5</sub> + F<sub>2</sub>
-The format: <pre>b<sub>0</sub>b<sub>1</sub>b<sub>1</sub>b<sub>2</sub>...b<sub>n</sub>
+The format: b<sub>0</sub>b<sub>1</sub>b<sub>1</sub>b<sub>2</sub>...b<sub>n</sub>
 For F<sub>7</sub>, b<sub>7-2</sub> = b<sub>5</sub> = 1
 For F<sub>5</sub>, b<sub>5-2</sub> = b<sub>3</sub> = 1
 For F<sub>2</sub>, b<sub>2-2</sub> = b<sub>0</sub> = 1
