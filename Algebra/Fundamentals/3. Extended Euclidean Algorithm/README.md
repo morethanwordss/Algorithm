@@ -1,12 +1,12 @@
 # Extended Euclidean Algorithm
 <pre>a.x + b.y = gcd(a, b)</pre>
 
-## Recap
+## Theory
 <pre>
 if (b == 0) gcd(a, b) = a;
 else gcd(a, b) = gcd(b, a mod b);
 </pre>
-The algorithm ends with `b == 0` and `a = g`. <br>
+The process ends with `b == 0` and `a = g`. <br>
 <pre>
 >> a.x + b.y = g
 >> g.x + 0.y = g
