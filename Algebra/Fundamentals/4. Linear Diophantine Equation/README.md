@@ -28,9 +28,9 @@ if (b == 0) x = c / a;
 <pre>
 if (a != 0 and b != 0):
    
-(a.x + b.y) % g == 0 because,'
-i)  a.x % g == 0
-ii) b.y % g == 0
+(a.x + b.y) % g == 0 because,
+>>  a.x % g == 0
+>>  b.y % g == 0
 
 So, (c % g != 0) has no soln
 </pre>
