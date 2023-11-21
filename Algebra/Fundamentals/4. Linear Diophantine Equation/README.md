@@ -9,8 +9,8 @@ if (a == 0 && b == 0):
 >> 0.x + 0.y = c
 >> 0 + 0 = c
 >> c = 0
+   
 So, (a == 0 && b == 0 && c != 0) has no soln
->> If a == 0 or b == 0
 </pre>
 
 <pre>
