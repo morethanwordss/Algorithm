@@ -6,7 +6,7 @@
 if (b == 0) gcd(a, b) = a;
 else gcd(a, b) = gcd(b, a mod b);
 </pre>
-The process ends with `b == 0` and `a = g`. <br>
+This process ends with `b == 0` and `a = g`. <br>
 <pre>
 >> a.x + b.y = g
 >> g.x + 0.y = g
