@@ -121,7 +121,7 @@ def fib(n):
 ### Matrix Form
 Notice the following relation, <br>
 <img width="189" alt="Screenshot 2023-11-21 215833" src="https://github.com/t0-ji/Algorithm/assets/108709544/6b0b9e36-ac7f-47b1-b797-60e30035fa75"> <br>
-We can find F<sub>n</sub> in `O(log n)` Time by applying Binary Exponentiation to raise the matrix to `n`.
+We can find F<sub>n</sub> in `O(log n)` time by applying Binary Exponentiation to raise the matrix to the power `n`.
 ```c++
 /* c++ */
 struct matrix {
