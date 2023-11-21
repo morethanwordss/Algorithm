@@ -47,7 +47,7 @@ _According to Zeckendorf's theorem, any natural number_ `n` _can be uniquely rep
 _Notice, any number n is not represented by the summation of two consecutive Fibonacci Numbers, as the summation of two consecutive fibonacci number will be another ficonacci number by the definition._ <br>
 _Therefore,_ <br>
 **5** _is not be represented as_ **F<sub>4</sub> + F<sub>3</sub>** , <br>
-_instead_ **5** _is represented as_ **F<sub>5</sub**> <br>
+_instead_ **5** _is represented as_ **F<sub>5</sub>** <br>
 _Any number can be uniquely encoded in the Fibonacci coding._ <br>
 _And we can describe this representation with binary code_ **b<sub>0</sub>b<sub>1</sub>b<sub>1</sub>b<sub>2</sub>...b<sub>n</sub>1**. <br>
 _Where_, **b<sub>i</sub>** _is_ **1** _if_ **F<sub>i+2</sub>** _is used in the representation, otherwise_ **0**. <br> 
