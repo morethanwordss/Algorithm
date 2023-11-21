@@ -36,12 +36,12 @@ GCD(F<sub>m</sub> , F<sub>n</sub>) = F<sub>GCD(m, n)</sub>
 Fibonacci numbers are the worst possible inputs for Euclidean algorithm <br>
 According to Zeckendorf's theorem, any natural number `n` can be uniquely represented as a sum of Fibonacci numbers
 <pre>
- 1 = 1          = F<sub>2</sub>
- 2 = 2          = F<sub>3</sub>
- 6 = 5 + 1      = F<sub>5</sub> + F<sub>2</sub>
- 8 = 8          = F<sub>6</sub>
- 9 = 8 + 1      = F<sub>6</sub> + F<sub>2</sub>
-19 = 13 + 5 + 1 = F<sub>7</sub> + F<sub>5</sub> + F<sub>2</sub>
+ 1   = 1             = F<sub>2</sub>
+ 2   = 2             = F<sub>3</sub>
+ 6   = 5 + 1         = F<sub>5</sub> + F<sub>2</sub>
+ 8   = 8             = F<sub>6</sub>
+ 9   = 8 + 1         = F<sub>6</sub> + F<sub>2</sub>
+19   = 13 + 5 + 1    = F<sub>7</sub> + F<sub>5</sub> + F<sub>2</sub>
 </pre>
 Notice, any number `n` is not represented by the summation of two consecutive Fibonacci Numbers, as the summation of two consecutive fibonacci number will be another ficonacci number by the definition. <br>
 Therefore,
