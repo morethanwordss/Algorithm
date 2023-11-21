@@ -87,6 +87,12 @@ After adding a final 1 to the code to indicate its end: 1001011
 <pre>
 Let c<sub>1</sub>  = (1 + sqrt(5)) / 2
 and c<sub>2</sub> = (1 - sqrt(5)) / 2
-F<sub>n</sub> = (c<sub>1</sub><sup>n</sup> - c<sub>2</sub><sup>n</sup>) / sqrt(5)
+F<sub>n</sub> = (c<sub>1</sub><sup>n</sup> - c<sub>2</sub><sup>n</sup>) / sqrt(5) ..... (Binet's Formula)
 </pre>
+Notice, c<sub>2</sub> is always less than 1 and it also decreases exponentially. Hence c<sub>1</sub> alone is "Almost" F<sub>n</sub> .
+So, this can be written strictly as,
+<pre>
+F<sub>n</sub> = round(c<sub>1</sub> / sqrt(5))
+</pre>
+As these two formulas would require very high accuracy when working with fractional numbers, they are of little use in practical calculations.
 
