@@ -19,7 +19,7 @@ _The "Addition" Rule:_
 <pre>
    F<sub>n+k</sub> = F<sub>k</sub>.F<sub>n+1</sub> + F<sub>k-1</sub>.F<sub>n</sub>
 </pre>
-_If (k = n),_
+_If_ `(k = n)`,
 <pre>
    F<sub>2n</sub> = F<sub>n</sub>.F<sub>n+1</sub> + F<sub>n-1</sub>.F<sub>n</sub>
 >> F<sub>2n</sub> = F<sub>n</sub>(F<sub>n+1</sub> + F<sub>n-1</sub>)
