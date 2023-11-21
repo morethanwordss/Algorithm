@@ -37,11 +37,14 @@ So, (c % g != 0) has no soln
 
 ## Finding One Solution
 <pre>
+Euclidean Extended Algorithm:
    a.x' + b.y'       = g
 >> (a.x' + b.y').k   = g.k
 >> a.x'.k + b.y'.k   = g.k
 >> a.x'.k + b.y'.k   = c     [let g.k == c]
-   
+>> a.x + b.y         = c
+</pre>
+<pre>
 x   = x'.k   = x'.(c/g)
 y   = y'.k   = y'.(c/g)
 </pre>
@@ -78,7 +81,7 @@ bool gcdSoln(int a, int b, int c, int &x, int &y, int &g) {
 Solution 0: (x<sub>0</sub> + 0 . b/g, y<sub>0</sub> - 0 . a/g)
 Solution 1: (x<sub>0</sub> + 1 . b/g, y<sub>0</sub> - 1 . a/g)
 Solution 2: (x<sub>0</sub> + 2 . b/g, y<sub>0</sub> - 2 . a/g)
-..............................................................
+........................................
 Solution k: (x<sub>0</sub> + k . b/g, y<sub>0</sub> - k . a/g)
 </pre>
 
