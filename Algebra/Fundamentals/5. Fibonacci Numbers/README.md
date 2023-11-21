@@ -44,7 +44,7 @@ According to Zeckendorf's theorem, any natural number `n` can be uniquely repres
 19   = 13 + 5 + 1    = F<sub>7</sub> + F<sub>5</sub> + F<sub>2</sub>
 </pre>
 Notice, any number `n` is not represented by the summation of two consecutive Fibonacci Numbers, as the summation of two consecutive fibonacci number will be another ficonacci number by the definition. <br>
-Therefore,
+For example,
 <pre>
 5 is not represented as F<sub>4</sub> + F<sub>3</sub> , but
 5 is represented as F<sub>5</sub>
