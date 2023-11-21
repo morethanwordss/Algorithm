@@ -9,17 +9,15 @@ F<sub>n</sub> = F<sub>n-1</sub> + F<sub>n-2</sub> for n >= 2
 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
 </pre>
 ## Properties
-_Cassini's Identity:_
+
 <pre>
-F<sub>n-1</sub>.F<sub>n+1</sub> - F<sub>n</sub><sup>2</sup> = (-1)<sup>n</sup>
+F<sub>n-1</sub>.F<sub>n+1</sub> - F<sub>n</sub><sup>2</sup> = (-1)<sup>n</sup>     [Cassini's Identity]
 </pre>
-_The "Addition" Rule:_
 <pre>
-F<sub>n+k</sub> = F<sub>k</sub>.F<sub>n+1</sub> + F<sub>k-1</sub>.F<sub>n</sub>
+F<sub>n+k</sub> = F<sub>k</sub>.F<sub>n+1</sub> + F<sub>k-1</sub>.F<sub>n</sub>     [The "Addition" Rule]
 </pre>
-For `k == n`,
 <pre>
-   F<sub>2n</sub> = F<sub>n</sub>.F<sub>n+1</sub> + F<sub>n-1</sub>.F<sub>n</sub>
+   F<sub>2n</sub> = F<sub>n</sub>.F<sub>n+1</sub> + F<sub>n-1</sub>.F<sub>n</sub>     [if k == n]
 >> F<sub>2n</sub> = F<sub>n</sub>(F<sub>n+1</sub> + F<sub>n-1</sub>)
 </pre>
 Therefore, we can say that,
