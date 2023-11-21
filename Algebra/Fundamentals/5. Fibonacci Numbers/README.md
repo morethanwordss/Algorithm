@@ -49,8 +49,16 @@ Therefore,
 5 is not represented as F<sub>4</sub> + F<sub>3</sub> , but
 5 is represented as F<sub>5</sub>
 </pre>
-Any number can be uniquely encoded in the Fibonacci coding, and we can describe this representation with binary code as <pre>b<sub>0</sub>b<sub>1</sub>b<sub>1</sub>b<sub>2</sub>...b<sub>n</sub><strong>**1**</strong>
+Any number can be uniquely encoded in the Fibonacci coding, and we can describe this representation with binary code as <pre>b<sub>0</sub>b<sub>1</sub>b<sub>1</sub>b<sub>2</sub>...b<sub>n</sub>**1**
 Where, b<sub>i</sub> is `1` if F<sub>i+2</sub> is used in the representation, otherwise `0` </pre> 
 Again, notice the binary code representation ends with an additional `1` at the end. This is the only occurance where `two consecutive 1` appears (_We have previously proved that any number_ `n` _is not represented by the summation of two consecutive Fibonacci Numbers, as the summation of two consecutive fibonacci number will be another ficonacci number by the definition_) which can be identified as the end of the representation.
+<pre>
+ 1 = 1          = F<sub>2</sub>                                 = (11)<sub>F</sub>
+ 2 = 2          = F<sub>3</sub>                                 = (011)<sub>F</sub>
+ 6 = 5 + 1      = F<sub>5</sub> + F<sub>2</sub>                 = (10011)<sub>F</sub>
+ 8 = 8          = F<sub>6</sub>                                 = (000011)<sub>F</sub>
+ 9 = 8 + 1      = F<sub>6</sub> + F<sub>2</sub>                 = (100011)<sub>F</sub>
+19 = 13 + 5 + 1 = F<sub>7</sub> + F<sub>5</sub> + F<sub>2</sub> = (1001011)<sub>F</sub>
+</pre>
 
 
