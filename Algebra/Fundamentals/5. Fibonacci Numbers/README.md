@@ -24,6 +24,6 @@ _If_ `(k = n)`,
    F<sub>2n</sub> = F<sub>n</sub>.F<sub>n+1</sub> + F<sub>n-1</sub>.F<sub>n</sub>
 >> F<sub>2n</sub> = F<sub>n</sub>(F<sub>n+1</sub> + F<sub>n-1</sub>)
 </pre>
-Therefore, we can say that for any positive integer `k`, F<sub>n.k</sub> is a multiple of F<sub>n</sub>
+_Therefore, we can say that for any positive integer_ `k`, **F<sub>nk</sub>** _is a multiple of_ **F<sub>n</sub>**
 
 
