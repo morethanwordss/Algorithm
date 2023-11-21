@@ -29,12 +29,12 @@ _Therefore, we can say that_,
 For any positive integer k:
    F<sub>nk</sub> is a multiple of F<sub>n</sub>
    
-And if F<sub>m</sub> is a multiple of F<sub>n</sub>:
+If F<sub>m</sub> is a multiple of F<sub>n</sub>:
    m is a multiple of n
 </pre>
 _GCD Identity:_
 <pre>
-GCD(F<sub>m</sub>, F<sub>n</sub>) = F<sub>GCD(m, n)</sub>
+GCD(F<sub>m</sub> , F<sub>n</sub>) = F<sub>GCD(m, n)</sub>
 </pre>
 
 
