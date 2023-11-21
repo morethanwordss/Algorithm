@@ -24,7 +24,14 @@ _If_ `(k = n)`,
    F<sub>2n</sub> = F<sub>n</sub>.F<sub>n+1</sub> + F<sub>n-1</sub>.F<sub>n</sub>
 >> F<sub>2n</sub> = F<sub>n</sub>(F<sub>n+1</sub> + F<sub>n-1</sub>)
 </pre>
-_Therefore, we can say that for any positive integer_ `k` , **F<sub>nk</sub>** _is a multiple of_ **F<sub>n</sub>** <br>
-_In inverse, if_ **F<sub>m</sub>** _is a multiple of_ **F<sub>n</sub>** , _then_ `m` _is a multiple of_ `n`
+_Therefore, we can say that_,
+<pre>
+_For any positive integer k_ , **F<sub>nk</sub>** _is a multiple of_ **F<sub>n</sub>** <br>
+_In inverse, if_ **F<sub>m</sub>** _is a multiple of_ **F<sub>n</sub>** , _then_ `m` _is a multiple of_ `n` <br>
+</pre>
+_GCD Identity:_
+<pre>
+GCD(F<sub>m</sub>, F<sub>n</sub>) = F<sub>GCD(m, n)</sub>
+</pre>
 
 
