@@ -118,4 +118,75 @@ def fib(n):
         a, b = b, tmp
     return a
 ```
+### Matrix Form
+Notice the following relation,
 <img width="189" alt="Screenshot 2023-11-21 215833" src="https://github.com/t0-ji/Algorithm/assets/108709544/6b0b9e36-ac7f-47b1-b797-60e30035fa75">
+We can find F<sub>n</sub> in `O(log n)` Time by applying Binary Exponentiation to raise the matrix to `n`.
+```c++
+/* c++ */
+struct matrix {
+    long long mat[2][2];
+    matrix friend operator *(const matrix &a, const matrix &b){
+        matrix c;
+        for (int i = 0; i < 2; i++) {
+          for (int j = 0; j < 2; j++) {
+              c.mat[i][j] = 0;
+              for (int k = 0; k < 2; k++) {
+                  c.mat[i][j] += a.mat[i][k] * b.mat[k][j];
+              }
+          }
+        }
+        return c;
+    }
+};
+
+matrix matpow(matrix base, long long n) {
+    matrix ans{ {
+      {1, 0},
+      {0, 1}
+    } };
+    while (n) {
+        if(n&1)
+            ans = ans*base;
+        base = base*base;
+        n >>= 1;
+    }
+    return ans;
+}
+
+long long fib(int n) {
+    matrix base{ {
+      {1, 1},
+      {1, 0}
+    } };
+    return matpow(base, n).mat[0][1];
+}
+```python
+# Python
+class Matrix:
+    def __init__(self, mat):
+        self.mat = mat
+
+    def __mul__(self, other):
+        c = [[0, 0], [0, 0]]
+        for i in range(2):
+            for j in range(2):
+                c[i][j] = 0
+                for k in range(2):
+                    c[i][j] += self.mat[i][k] * other.mat[k][j]
+        return Matrix(c)
+
+def matpow(base, n):
+    ans = Matrix([[1, 0], [0, 1]])
+    while n:
+        if n & 1:
+            ans = ans * base
+        base = base * base
+        n >>= 1
+    return ans
+
+def fib(n):
+    base = Matrix([[1, 1], [1, 0]])
+    return matpow(base, n).mat[0][1]
+```
+
