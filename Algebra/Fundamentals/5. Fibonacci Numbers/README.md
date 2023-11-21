@@ -85,8 +85,8 @@ After adding a final 1 to the code to indicate its end: 1001011
 ## N<sup>th</sup> Fibonacci Number
 ### Binet's Formula
 <pre>
-Let c  = (1 + sqrt(5)) / 2
-and c' = (1 - sqrt(5)) / 2
-F<sub>n</sub> = (c<sup>n</sup> - c'<sup>n</sup>) / sqrt(5)
+Let c<sub>1</sub>  = (1 + sqrt(5)) / 2
+and c<sub>2</sub> = (1 - sqrt(5)) / 2
+F<sub>n</sub> = (c<sub>1</sub><sup>n</sup> - c<sub>2</sub><sup>n</sup>) / sqrt(5)
 </pre>
 
