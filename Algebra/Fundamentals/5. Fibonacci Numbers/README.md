@@ -53,12 +53,12 @@ Any number can be uniquely encoded in the Fibonacci coding, and we can describe 
 Where, b<sub>i</sub> is `1` if F<sub>i+2</sub> is used in the representation, otherwise `0` </pre> 
 Again, notice the binary code representation ends with an additional `1` at the end. This is the only occurance where `two consecutive 1` appears (_We have previously proved that any number_ `n` _is not represented by the summation of two consecutive Fibonacci Numbers, as the summation of two consecutive fibonacci number will be another ficonacci number by the definition_) which can be identified as the end of the representation.
 <pre>
- 1   = 1             = F2              = (1**1**)<sub>F</sub>
- 2   = 2             = F3              = (01**1**)<sub>F</sub>
- 6   = 5 + 1         = F5 + F2         = (1001**1**)<sub>F</sub>
- 8   = 8             = F6              = (00001**1**)<sub>F</sub>
- 9   = 8 + 1         = F6 + F2         = (10001**1**)<sub>F</sub>
-19   = 13 + 5 + 1    = F7 + F5 + F2    = (100101**1**)<sub>F</sub>
+ 1   = 1             = F2              = (11)<sub>F</sub>
+ 2   = 2             = F3              = (011)<sub>F</sub>
+ 6   = 5 + 1         = F5 + F2         = (10011)<sub>F</sub>
+ 8   = 8             = F6              = (000011)<sub>F</sub>
+ 9   = 8 + 1         = F6 + F2         = (100011)<sub>F</sub>
+19   = 13 + 5 + 1    = F7 + F5 + F2    = (1001011)<sub>F</sub>
 </pre>
 
 
