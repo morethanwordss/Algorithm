@@ -17,12 +17,13 @@ F<sub>n-1</sub>.F<sub>n+1</sub> - F<sub>n</sub><sup>2</sup> = (-1)<sup>n</sup>
 </pre>
 _The "Addition" Rule:_
 <pre>
-   F<sub>n+k</sub> = F<sub>k</sub>.F<sub>n+1</sub> + F<sub>k-1</sub>.F<sub>n</sub>
+F<sub>n+k</sub> = F<sub>k</sub>.F<sub>n+1</sub> + F<sub>k-1</sub>.F<sub>n</sub>
 </pre>
 _If_ `(k = n)`,
 <pre>
    F<sub>2n</sub> = F<sub>n</sub>.F<sub>n+1</sub> + F<sub>n-1</sub>.F<sub>n</sub>
 >> F<sub>2n</sub> = F<sub>n</sub>(F<sub>n+1</sub> + F<sub>n-1</sub>)
 </pre>
+Therefore, we can say that for any positive integer `k`, F<sub>n.k</sub> is a multiple of F<sub>n</sub>
 
 
