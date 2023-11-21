@@ -195,6 +195,6 @@ Expanding the above matrix represntation for `n = 2 . k` , <br>
 <img width="329" alt="Screenshot 2023-11-21 221957" src="https://github.com/t0-ji/Algorithm/assets/108709544/1dd6e783-0feb-44fa-a069-dd78239d899c"> <br>
 We can find these simpler equation,
 <pre>
-F<sub>2k+1</sub> = F<sub>k+1</sub><sup>2</sup> + F<sub>k</sub><sup>2</sup>
-F<sub>2k</sub> = F<sub>k</sub>(F<sub>k+1</sub> + F<sub>k-1</sub>
+F<sub>2k+1</sub> = (F<sub>k+1</sub>)<sup>2</sup> + (F<sub>k</sub>)<sup>2</sup>
+F<sub>2k</sub> = F<sub>k</sub>(F<sub>k+1</sub> + F<sub>k-1</sub>)
 </pre>
