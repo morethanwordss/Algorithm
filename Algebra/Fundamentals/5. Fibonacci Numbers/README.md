@@ -19,7 +19,7 @@ _The "Addition" Rule:_
 <pre>
 F<sub>n+k</sub> = F<sub>k</sub>.F<sub>n+1</sub> + F<sub>k-1</sub>.F<sub>n</sub>
 </pre>
-_If_ `k == n`,
+For `k == n`,
 <pre>
    F<sub>2n</sub> = F<sub>n</sub>.F<sub>n+1</sub> + F<sub>n-1</sub>.F<sub>n</sub>
 >> F<sub>2n</sub> = F<sub>n</sub>(F<sub>n+1</sub> + F<sub>n-1</sub>)
@@ -43,7 +43,7 @@ According to Zeckendorf's theorem, any natural number `n` can be uniquely repres
  9 = 8 + 1      = F<sub>6</sub> + F<sub>2</sub>
 19 = 13 + 5 + 1 = F<sub>7</sub> + F<sub>5</sub> + F<sub>2</sub>
 </pre>
-Notice, any number n is not represented by the summation of two consecutive Fibonacci Numbers, as the summation of two consecutive fibonacci number will be another ficonacci number by the definition. <br>
+Notice, any number `n` is not represented by the summation of two consecutive Fibonacci Numbers, as the summation of two consecutive fibonacci number will be another ficonacci number by the definition. <br>
 Therefore,
 <pre>
 5 is not represented as F<sub>4</sub> + F<sub>3</sub> , but
