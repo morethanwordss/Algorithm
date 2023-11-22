@@ -19,6 +19,25 @@ if A = 1 1     then,  A<sup>n</sup> =  F<sub>n+1</sub> F<sub>n</sub>
        1 0             <sup> </sup>    F<sub>n  </sub> F<sub>n-1</sub>
 </pre>
 
+## F<sub>n+1</sub> . F<sub>n-1</sub> - (F<sub>n</sub>)<sup>2</sup> = (-1)<sup>n</sup>
+<pre>
+A<sup> </sup> = 1 1
+ <sup> </sup>   1 0
+</pre>
+<pre>
+del(A<sup> </sup>)   = 1.0 - 1.1 = -1
+del(A<sup>n</sup>)   = (-1)<sup>n</sup>
+</pre>
+<pre>
+Again, A<sup>n</sup> =  F<sub>n+1</sub> F<sub>n</sub>
+        <sup> </sup>    F<sub>n  </sub> F<sub>n-1</sub>
+       
+del(A<sup>n</sup>)   = F<sub>n+1</sub> . F<sub>n-1</sub> - F<sub>n</sub> . F<sub>n  </sub>
+</pre>
+<pre>
+Therefore, F<sub>n+1</sub> . F<sub>n-1</sub> - (F<sub>n</sub>)<sup>2</sup> = (-1)<sup>n</sup>
+</pre>
+
 ## F<sub>m+n</sub> = F<sub>m+1</sub>.F<sub>n</sub> + F<sub>m</sub>.F<sub>n-1</sub>
 <pre>
 A<sup>m+n</sup> = A<sup>m</sup> . A<sup>n </sup>
