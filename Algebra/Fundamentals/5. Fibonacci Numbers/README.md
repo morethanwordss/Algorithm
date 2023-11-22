@@ -28,7 +28,7 @@ A<sup>m+n = A<sup>m</sup> . A<sup>n </sup>
 </pre>
 <pre> 
 F<sub>m+n+1</sub> F<sub>m+n  </sub>     = F<sub>m+1</sub> F<sub>m  </sub>   .    F<sub>n+1</sub> F<sub>n  </sub>
-F<sub>m+n  </sub> F<sub>m+n-1</sub>       F<sub>m  </sub> F<sub>m-1</sub>   .    F<sub>n  </sub> F<sub>n-1</sub>
+F<sub>m+n  </sub> F<sub>m+n-1</sub>       F<sub>m  </sub> F<sub>m-1</sub>        F<sub>n  </sub> F<sub>n-1</sub>
 </pre>
 <pre>
 F<sub>m+n+1</sub> F<sub>m+n  </sub>     = ?<sub>   </sub> F<sub>m+1</sub>.F<sub>n</sub> + F<sub>m</sub>.F<sub>n-1</sub>
