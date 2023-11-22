@@ -16,8 +16,12 @@ F<sub>n</sub> = F<sub>n-1</sub> + F<sub>n-2</sub> for n >= 2
 
 <pre>
 By Induction it can be easily proved that,
-   if A = 1 1 then A<sup>n</sup> = F<sub>n+1</sub> F<sub>n</sub>
-          1 0                      F<sub>n  </sub> F<sub>n-1</sub>
+if A = 
+   1 1
+   1 0 
+then A<sup>n</sup> =
+   F<sub>n+1</sub> F<sub>n</sub>
+   F<sub>n  </sub> F<sub>n-1</sub>
 </pre>
 
 <pre>
