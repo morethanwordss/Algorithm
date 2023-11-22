@@ -67,6 +67,22 @@ if    F<sub>m</sub> is a multiple of F<sub>n</sub>,
 then, m<sub> </sub> is a multiple of n.
 </pre>
 
+## GCD(F<sub>n+1</sub>, F<sub>n</sub>) = 1
+<pre>
+F<sub>n+1</sub> = F<sub>n</sub> + F<sub>n-1</sub>
+F<sub>n+1</sub> - F<sub>n</sub> = F<sub>n-1</sub>
+F<sub>n+1</sub> % F<sub>n</sub> = F<sub>n-1</sub>
+
+</pre>
+<pre>
+GCD(F<sub>n+1</sub>, F<sub>n</sub>) = 1 if n == 1
+     <sub>   </sub>   <sub> </sub>  = GCD(F<sub>n</sub>, F<sub>n+1</sub> % F<sub>n</sub>) Otherwise
+</pre>
+<pre>
+As, F<sub>n+1</sub> is not divisible by F<sub>n</sub>,
+This process will end with n == 1
+Therefore, GCD(F<sub>n+1</sub>, F<sub>n</sub>) = 1 [Proved]
+</pre>
 ## GCD(F<sub>m</sub> , F<sub>n</sub>) = F<sub>GCD(m, n)</sub>
 <pre>
 Fibonacci numbers are the worst possible inputs for Euclidean algorithm <br>
