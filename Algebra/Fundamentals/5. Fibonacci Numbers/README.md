@@ -43,6 +43,7 @@ F<sub>nk</sub> | F<sub>n</sub> for k >= 1
 </pre>
 <pre>
 The Inverse is also true,
+       
 if    F<sub>m</sub> is a multiple of F<sub>n</sub>, 
 then, m<sub> </sub> is a multiple of n.
 </pre>
