@@ -136,13 +136,14 @@ This process will end with n == 1
 Therefore, GCD(F<sub>n+1</sub>, F<sub>n</sub>) = 1 [Proved]
 </pre>
 
-## GCD(nk+r , n) = GCD(nk+r , r)
-<pre>
-GCD(nk + r, n) = 
-</pre>
 ## GCD(F<sub>m</sub> , F<sub>n</sub>) = F<sub>GCD(m, n)</sub>
 <pre>
-Fibonacci numbers are the worst possible inputs for Euclidean algorithm <br>
+By Strong Induction it can be proved that GCD(F<sub>m</sub> , F<sub>n</sub>) = F<sub>GCD(m, n)</sub>
+</pre>
+>> Fibonacci numbers are the worst possible inputs for Euclidean Algorithm <br>
+
+## Fibonacci Sequence to Binary Codewords
+<pre>
 According to Zeckendorf's theorem, any natural number `n` can be uniquely represented as a sum of Fibonacci numbers
 <pre>
  1   = 1             = F<sub>2</sub>
@@ -152,16 +153,21 @@ According to Zeckendorf's theorem, any natural number `n` can be uniquely repres
  9   = 8 + 1         = F<sub>6</sub> + F<sub>2</sub>
 19   = 13 + 5 + 1    = F<sub>7</sub> + F<sub>5</sub> + F<sub>2</sub>
 </pre>
-Notice, any number `n` is not represented by the summation of two consecutive Fibonacci Numbers, as the summation of two consecutive fibonacci number will be another ficonacci number by the definition. <br>
-For example,
 <pre>
+Notice, any number `n` is not represented by the summation of two consecutive Fibonacci Numbers, as the summation of two consecutive fibonacci number will be another ficonacci number by the definition. <br>
+</pre>
+<pre>
+For example,
 5 is not represented as F<sub>4</sub> + F<sub>3</sub> , but
 5 is represented as F<sub>5</sub>
 </pre>
-Any number can be uniquely encoded in the Fibonacci coding, and we can describe this representation with binary code as <pre>b<sub>0</sub>b<sub>1</sub>b<sub>1</sub>b<sub>2</sub>...b<sub>n</sub>**1**
-Where, b<sub>i</sub> is `1` if F<sub>i+2</sub> is used in the representation, otherwise `0` </pre> 
-Again, notice the binary code representation ends with an additional `1` at the end. This is the only occurance where `two consecutive 1` appears (_We have previously proved that any number_ `n` _is not represented by the summation of two consecutive Fibonacci Numbers, as the summation of two consecutive fibonacci number will be another ficonacci number by the definition_) which can be identified as the end of the representation.
 <pre>
+Any number can be uniquely encoded in the Fibonacci coding, and we can describe this representation with binary code as b<sub>0</sub>b<sub>1</sub>b<sub>1</sub>b<sub>2</sub>...b<sub>n</sub>1
+Where, b<sub>i</sub> is 1 if F<sub>i+2</sub> is used in the representation, otherwise 0
+</pre> 
+<pre>
+Again, notice the binary code representation ends with an additional 1 at the end. This is the only occurance where two consecutive 1 appears which can be identified as the end of the representation.
+
  1   = 1             = F2              = (11)<sub>F</sub>
  2   = 2             = F3              = (011)<sub>F</sub>
  6   = 5 + 1         = F5 + F2         = (10011)<sub>F</sub>
@@ -169,8 +175,9 @@ Again, notice the binary code representation ends with an additional `1` at the 
  9   = 8 + 1         = F6 + F2         = (100011)<sub>F</sub>
 19   = 13 + 5 + 1    = F7 + F5 + F2    = (1001011)<sub>F</sub>
 </pre>
-The encoding of an integer `n` can be done with a simple greedy algorithm.
 <pre>
+This encoding of an integer `n` can be done with a simple greedy algorithm:
+       
 1. Iterate through the Fibonacci numbers from the largest to the smallest until you find one less than or equal to n .
 2. Suppose this number was F<sub>i</sub> .
    Subtract F<sub>i</sub> from n and put a 1 in the (i - 2) position of the code word (indexing from 0 from the leftmost to the rightmost bit).
@@ -191,121 +198,27 @@ For F<sub>2</sub>, b<sub>2-2</sub> = b<sub>0</sub> = 1
 Resulting Code: 100101
 After adding a final 1 to the code to indicate its end: 1001011
 </pre>
-## N<sup>th</sup> Fibonacci Number
-### Binet's Formula
+## Binet's Formula
+<img width="368" alt="Screenshot 2023-11-22 123643" src="https://github.com/t0-ji/Algorithm/assets/108709544/f9c9e21b-83c2-4c7f-8d80-fd51b23b1ca8"> <br>
 <pre>
-Let c<sub>1</sub> = (1 + sqrt(5)) / 2
-and c<sub>2</sub> = (1 - sqrt(5)) / 2
-F<sub>n</sub> = (c<sub>1</sub><sup>n</sup> - c<sub>2</sub><sup>n</sup>) / sqrt(5) ..... (Binet's Formula)
+Notice, 1 - sqrt(5) is always less than 1 and also decreases exponentially. Hence we can ignore this part.
+So, this can be written strictly as as the following equation, where the square brackets denote rounding to the nearest integer.
 </pre>
-Notice, c<sub>2</sub> is always less than 1 and it also decreases exponentially. Hence c<sub>1</sub> alone is "Almost" F<sub>n</sub> .
-So, this can be written strictly as,
-<pre>
-F<sub>n</sub> = round(c<sub>1</sub> / sqrt(5))
-</pre>
-As these two formulas would require very high accuracy when working with fractional numbers, they are of little use in practical calculations.
-### In Linear Time
-```c++
-/* c++ */
-int fib(int n) {
-    int a = 0;
-    int b = 1;
-    for (int i = 0; i < n; i++) {
-        int tmp = a + b;
-        a = b;
-        b = tmp;
-    }
-    return a;
-}
-```
-```python
-# Python
-def fib(n):
-    a, b = 0, 1
-    for i in range(n):
-        tmp = a + b
-        a, b = b, tmp
-    return a
-```
-### Matrix Form
-Notice the following relation, <br>
-<img width="189" alt="Screenshot 2023-11-21 215833" src="https://github.com/t0-ji/Algorithm/assets/108709544/6b0b9e36-ac7f-47b1-b797-60e30035fa75"> <br>
-We can find F<sub>n</sub> in `O(log n)` time by applying Binary Exponentiation to raise the matrix to the power `n`.
-```c++
-/* c++ */
-struct matrix {
-    long long mat[2][2];
-    matrix friend operator *(const matrix &a, const matrix &b){
-        matrix c;
-        for (int i = 0; i < 2; i++) {
-          for (int j = 0; j < 2; j++) {
-              c.mat[i][j] = 0;
-              for (int k = 0; k < 2; k++) {
-                  c.mat[i][j] += a.mat[i][k] * b.mat[k][j];
-              }
-          }
-        }
-        return c;
-    }
-};
+<img width="172" alt="Screenshot 2023-11-22 124043" src="https://github.com/t0-ji/Algorithm/assets/108709544/50aa9689-dd30-405a-b9cf-ac899bb67c78"> <br>
 
-matrix matpow(matrix base, long long n) {
-    matrix ans{ {
-      {1, 0},
-      {0, 1}
-    } };
-    while (n) {
-        if(n&1)
-            ans = ans*base;
-        base = base*base;
-        n >>= 1;
-    }
-    return ans;
-}
-
-long long fib(int n) {
-    matrix base{ {
-      {1, 1},
-      {1, 0}
-    } };
-    return matpow(base, n).mat[0][1];
-}
-```
-```python
-# Python
-class Matrix:
-    def __init__(self, mat):
-        self.mat = mat
-
-    def __mul__(self, other):
-        c = [[0, 0], [0, 0]]
-        for i in range(2):
-            for j in range(2):
-                c[i][j] = 0
-                for k in range(2):
-                    c[i][j] += self.mat[i][k] * other.mat[k][j]
-        return Matrix(c)
-
-def matpow(base, n):
-    ans = Matrix([[1, 0], [0, 1]])
-    while n:
-        if n & 1:
-            ans = ans * base
-        base = base * base
-        n >>= 1
-    return ans
-
-def fib(n):
-    base = Matrix([[1, 1], [1, 0]])
-    return matpow(base, n).mat[0][1]
-```
+>> As these two formulas would require very high accuracy when working with fractional numbers, they are of little use in practical calculations.
 ### Fast Doubling Method
-Expanding the above matrix represntation for `n = 2 . k` , <br>
-<img width="329" alt="Screenshot 2023-11-21 221957" src="https://github.com/t0-ji/Algorithm/assets/108709544/1dd6e783-0feb-44fa-a069-dd78239d899c"> <br>
-We can find these simpler equation, <br>
-<img width="298" alt="Screenshot 2023-11-21 223132" src="https://github.com/t0-ji/Algorithm/assets/108709544/b4cb2aa0-0fe7-4b2d-abfb-d81fbb12bf27"> <br>
+<pre>
+We know that, F<sub>m+n</sub> = F<sub>m+1</sub>.F<sub>n</sub> + F<sub>m</sub>.F<sub>n-1</sub>
+       
+if m == n,    F<sub>n+n</sub>  = F<sub>n+1</sub>.F<sub>n</sub> + F<sub>n</sub>.F<sub>n-1</sub>
+              F<sub>2n </sub>  = F<sub>n</sub> (F<sub>n+1</sub> + F<sub>n-1</sub>)
+              F<sub>2n </sub>  = F<sub>n</sub> (F<sub>n+1</sub> + F<sub>n+1</sub> - F<sub>n</sub>)  [F<sub>n+1</sub> = F<sub>n</sub> + F<sub>n-1</sub>]
+              F<sub>2n </sub>  = F<sub>n</sub> (2F<sub>n+1</sub> - F<sub>n</sub>)
+
+</pre>
 ```c++
-/* c++ */
+// returns Fn and Fn+1 as a pair
 pair<int, int> fib (int n) {
     if (n == 0)
         return {0, 1};
@@ -319,23 +232,8 @@ pair<int, int> fib (int n) {
         return {c, d};
 }
 ```
-```python
-# Python
-def fib(n):
-    if n == 0:
-        return (0, 1)
-
-    p = fib(n >> 1)
-    c = p[0] * (2 * p[1] - p[0])
-    d = p[0] * p[0] + p[1] * p[1]
-    
-    if n & 1:
-        return (d, c + d)
-    else:
-        return (c, d)
-```
-The above code returns F<sub>n</sub> and F<sub>n+1</sub> as a pair
 ### Periodicity modulo p
 <pre>
 F<sub>0</sub> mod p, F<sub>1</sub> mod p, F<sub>2</sub> mod p, F<sub>2</sub> mod p, F<sub>3</sub> mod p, ... 
 this sequence is periodic
+</pre>
