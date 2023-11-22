@@ -38,12 +38,13 @@ F<sub>m+n</sub> = F<sub>m+1</sub>.F<sub>n</sub> + F<sub>m</sub>.F<sub>n-1</sub> 
 ## F<sub>nk</sub> | F<sub>n</sub> For k >= 1
 <pre>
 By Induction it can be proved that,
-F<sub>nk</sub> | F<sub>n</sub> For k >= 1
+       
+F<sub>nk</sub> | F<sub>n</sub> for k >= 1
 </pre>
 <pre>
 The Inverse is also true,
-if F<sub>m</sub> is a multiple of F<sub>n</sub>, 
-then, m is a multiple of n.
+if    F<sub>m</sub> is a multiple of F<sub>n</sub>, 
+then, m<sub> </sub> is a multiple of n.
 </pre>
 
 
