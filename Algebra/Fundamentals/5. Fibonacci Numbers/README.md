@@ -38,6 +38,8 @@ F<sub>m+n  </sub> F<sub>m+n-1</sub>       ?<sub>   </sub> ?
 F<sub>m+n</sub> = F<sub>m+1</sub>.F<sub>n</sub> + F<sub>m</sub>.F<sub>n-1</sub> [PROVED]
 </pre>
 
+## F<sub>nk</sub> | F<sub>n</sub> For k >= 1
+
 <pre>
 F<sub>n-1</sub>.F<sub>n+1</sub> - F<sub>n</sub><sup>2</sup> = (-1)<sup>n</sup>     [Cassini's Identity]
 </pre>
