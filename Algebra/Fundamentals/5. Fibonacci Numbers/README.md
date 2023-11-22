@@ -14,7 +14,7 @@ The Sequence:
        0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
 </pre>
 
-## Properties
+## Matrix Representation
 
 <pre>
 By Induction it can be easily proved that,
@@ -22,7 +22,7 @@ if A = 1 1     then,  A<sup>n</sup> =  F<sub>n+1</sub> F<sub>n</sub>
        1 0             <sup> </sup>    F<sub>n  </sub> F<sub>n-1</sub>
 </pre>
 
-### F<sub>m+n</sub> = F<sub>m+1</sub>.F<sub>n</sub> + F<sub>m</sub>.F<sub>n-1</sub>
+## F<sub>m+n</sub> = F<sub>m+1</sub>.F<sub>n</sub> + F<sub>m</sub>.F<sub>n-1</sub>
 <pre>
 A<sup>m+n  </sup>  <sub>     </sub>     = A<sup>m  </sup>  <sub>   </sub> . A<sup>n  </sup>
 </pre>
