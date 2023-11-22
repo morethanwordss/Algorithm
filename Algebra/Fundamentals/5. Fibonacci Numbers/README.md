@@ -145,7 +145,6 @@ By Strong Induction it can be proved that GCD(F<sub>m</sub> , F<sub>n</sub>) = F
 ## Fibonacci Sequence to Binary Codewords
 <pre>
 According to Zeckendorf's theorem, any natural number `n` can be uniquely represented as a sum of Fibonacci numbers
-<pre>
  1   = 1             = F<sub>2</sub>
  2   = 2             = F<sub>3</sub>
  6   = 5 + 1         = F<sub>5</sub> + F<sub>2</sub>
