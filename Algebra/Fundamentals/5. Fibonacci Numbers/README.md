@@ -24,18 +24,18 @@ if A = 1 1     then,  A<sup>n</sup> =  F<sub>n+1</sub> F<sub>n</sub>
 
 ## F<sub>m+n</sub> = F<sub>m+1</sub>.F<sub>n</sub> + F<sub>m</sub>.F<sub>n-1</sub>
 <pre>
-A<sup>m+n  </sup>  <sub>     </sub>     = A<sup>m  </sup>  <sub>   </sub> . A<sup>n  </sup>
+A<sup>m+n = A<sup>m</sup> . A<sup>n </sup>
 </pre>
 <pre> 
-F<sub>m+n+1</sub> F<sub>m+n  </sub>     = F<sub>m+1</sub> F<sub>m  </sub> . F<sub>n+1</sub> F<sub>n  </sub>
-F<sub>m+n  </sub> F<sub>m+n-1</sub>       F<sub>m  </sub> F<sub>m-1</sub>   F<sub>n  </sub> F<sub>n-1</sub>
+F<sub>m+n+1</sub> F<sub>m+n  </sub>     = F<sub>m+1</sub> F<sub>m  </sub>   .    F<sub>n+1</sub> F<sub>n  </sub>
+F<sub>m+n  </sub> F<sub>m+n-1</sub>       F<sub>m  </sub> F<sub>m-1</sub>   .    F<sub>n  </sub> F<sub>n-1</sub>
 </pre>
 <pre>
 F<sub>m+n+1</sub> F<sub>m+n  </sub>     = ?<sub>   </sub> F<sub>m+1</sub>.F<sub>n</sub> + F<sub>m</sub>.F<sub>n-1</sub>
 F<sub>m+n  </sub> F<sub>m+n-1</sub>       ?<sub>   </sub> ?
 </pre>
 <pre>
-Therefore, F<sub>m+n</sub> = F<sub>m+1</sub>.F<sub>n</sub> + F<sub>m</sub>.F<sub>n-1</sub>
+F<sub>m+n</sub> = F<sub>m+1</sub>.F<sub>n</sub> + F<sub>m</sub>.F<sub>n-1</sub> [PROVED]
 </pre>
 
 <pre>
