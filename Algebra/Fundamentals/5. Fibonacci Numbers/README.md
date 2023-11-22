@@ -19,7 +19,7 @@ if A = 1 1     then,  A<sup>n</sup> =  F<sub>n+1</sub> F<sub>n</sub>
        1 0             <sup> </sup>    F<sub>n  </sub> F<sub>n-1</sub>
 </pre>
 
-## F<sub>n+1</sub> . F<sub>n-1</sub> - (F<sub>n</sub>)<sup>2</sup> = (-1)<sup>n</sup> [Cassini's Identity]
+## F<sub>n+1</sub> . F<sub>n-1</sub> - (F<sub>n</sub>)<sup>2</sup> = (-1)<sup>n</sup>
 <pre>
 A<sup> </sup> = 1 1
  <sup> </sup>   1 0
@@ -67,7 +67,7 @@ if    F<sub>m</sub> is a multiple of F<sub>n</sub>,
 then, m<sub> </sub> is a multiple of n.
 </pre>
 
-## GCD(F<sub>m</sub> , F<sub>n</sub>) = F<sub>GCD(m, n)</sub> [GCD Identity]
+## GCD(F<sub>m</sub> , F<sub>n</sub>) = F<sub>GCD(m, n)</sub>
 <pre>
 Fibonacci numbers are the worst possible inputs for Euclidean algorithm <br>
 According to Zeckendorf's theorem, any natural number `n` can be uniquely represented as a sum of Fibonacci numbers
