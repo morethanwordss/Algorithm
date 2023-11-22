@@ -63,7 +63,7 @@ F<sub>nk</sub> | F<sub>n</sub> for k >= 1
 <pre>
 The Inverse is also true,
        
-if    F<sub>m</sub> is a multiple of F<sub>n</sub>, 
+if    F<sub>m</sub> is a multiple of F<sub>n</sub> ,
 then, m<sub> </sub> is a multiple of n.
 </pre>
 
@@ -81,6 +81,8 @@ GCD(F<sub>n+1</sub> , F<sub>n</sub>) = 1 if n == 1
 This process will end with n == 1
 Therefore, GCD(F<sub>n+1</sub>, F<sub>n</sub>) = 1 [Proved]
 </pre>
+
+## GCD(F<sub>nk+r</sub> , F<sub>n</sub>) = GCD(nk + r, r)
 ## GCD(F<sub>m</sub> , F<sub>n</sub>) = F<sub>GCD(m, n)</sub>
 <pre>
 Fibonacci numbers are the worst possible inputs for Euclidean algorithm <br>
