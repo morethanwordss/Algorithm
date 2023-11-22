@@ -11,6 +11,19 @@ The Fibonacci Sequence is defined as:
 The Sequence:
        0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
 </pre>
+```c++
+// O(n) time
+int fib(int n) {
+    int a = 0;
+    int b = 1;
+    for (int i = 0; i < n; i++) {
+        int tmp = a + b;
+        a = b;
+        b = tmp;
+    }
+    return a;
+}
+```
 
 ## Matrix Representation
 <pre>
@@ -18,6 +31,47 @@ By Induction it can be easily proved that,
 if A = 1 1     then,  A<sup>n</sup> =  F<sub>n+1</sub> F<sub>n</sub>
        1 0             <sup> </sup>    F<sub>n  </sub> F<sub>n-1</sub>
 </pre>
+```c++
+// Using Binary Exponentiation to raise the matrix to the power n
+// O(n log n) time
+struct matrix {
+    long long mat[2][2];
+    matrix friend operator *(const matrix &a, const matrix &b){
+        matrix c;
+        for (int i = 0; i < 2; i++) {
+          for (int j = 0; j < 2; j++) {
+              c.mat[i][j] = 0;
+              for (int k = 0; k < 2; k++) {
+                  c.mat[i][j] += a.mat[i][k] * b.mat[k][j];
+              }
+          }
+        }
+        return c;
+    }
+};
+
+matrix matpow(matrix base, long long n) {
+    matrix ans{ {
+      {1, 0},
+      {0, 1}
+    } };
+    while (n) {
+        if(n&1)
+            ans = ans*base;
+        base = base*base;
+        n >>= 1;
+    }
+    return ans;
+}
+
+long long fib(int n) {
+    matrix base{ {
+      {1, 1},
+      {1, 0}
+    } };
+    return matpow(base, n).mat[0][1];
+}
+```
 
 ## F<sub>n+1</sub> . F<sub>n-1</sub> - (F<sub>n</sub>)<sup>2</sup> = (-1)<sup>n</sup>
 <pre>
@@ -82,7 +136,10 @@ This process will end with n == 1
 Therefore, GCD(F<sub>n+1</sub>, F<sub>n</sub>) = 1 [Proved]
 </pre>
 
-## GCD(F<sub>nk+r</sub> , F<sub>n</sub>) = GCD(nk + r, r)
+## GCD(nk+r , n) = GCD(nk+r , r)
+<pre>
+GCD(nk + r, n) = 
+</pre>
 ## GCD(F<sub>m</sub> , F<sub>n</sub>) = F<sub>GCD(m, n)</sub>
 <pre>
 Fibonacci numbers are the worst possible inputs for Euclidean algorithm <br>
