@@ -144,7 +144,8 @@ By Strong Induction it can be proved that GCD(F<sub>m</sub> , F<sub>n</sub>) = F
 
 ## Fibonacci Sequence to Binary Codewords
 <pre>
-According to Zeckendorf's theorem, any natural number `n` can be uniquely represented as a sum of Fibonacci numbers
+According to Zeckendorf's theorem, any natural number `n` can be uniquely represented as a sum of Fibonacci numbers.
+       
  1   = 1             = F<sub>2</sub>
  2   = 2             = F<sub>3</sub>
  6   = 5 + 1         = F<sub>5</sub> + F<sub>2</sub>
@@ -153,7 +154,8 @@ According to Zeckendorf's theorem, any natural number `n` can be uniquely repres
 19   = 13 + 5 + 1    = F<sub>7</sub> + F<sub>5</sub> + F<sub>2</sub>
 </pre>
 <pre>
-Notice, any number `n` is not represented by the summation of two consecutive Fibonacci Numbers, as the summation of two consecutive fibonacci number will be another ficonacci number by the definition. <br>
+Notice, any number `n` is not represented by the summation of two consecutive Fibonacci Numbers,
+as the summation of two consecutive fibonacci number will be another ficonacci number by the definition. <br>
 </pre>
 <pre>
 For example,
@@ -161,11 +163,13 @@ For example,
 5 is represented as F<sub>5</sub>
 </pre>
 <pre>
-Any number can be uniquely encoded in the Fibonacci coding, and we can describe this representation with binary code as b<sub>0</sub>b<sub>1</sub>b<sub>1</sub>b<sub>2</sub>...b<sub>n</sub>1
+Any number can be uniquely encoded in the Fibonacci coding, and we can describe this representation with binary code as 
+b<sub>0</sub>b<sub>1</sub>b<sub>1</sub>b<sub>2</sub>...b<sub>n</sub>1
 Where, b<sub>i</sub> is 1 if F<sub>i+2</sub> is used in the representation, otherwise 0
 </pre> 
 <pre>
-Again, notice the binary code representation ends with an additional 1 at the end. This is the only occurance where two consecutive 1 appears which can be identified as the end of the representation.
+Again, notice the binary code representation ends with an additional 1 at the end.
+This is the only occurance where two consecutive 1 appears which can be identified as the end of the representation.
 
  1   = 1             = F2              = (11)<sub>F</sub>
  2   = 2             = F3              = (011)<sub>F</sub>
