@@ -67,27 +67,8 @@ if    F<sub>m</sub> is a multiple of F<sub>n</sub>,
 then, m<sub> </sub> is a multiple of n.
 </pre>
 
-
+## GCD(F<sub>m</sub> , F<sub>n</sub>) = F<sub>GCD(m, n)</sub> [GCD Identity]
 <pre>
-F<sub>n-1</sub>.F<sub>n+1</sub> - F<sub>n</sub><sup>2</sup> = (-1)<sup>n</sup>     [Cassini's Identity]
-</pre>
-
-<pre>
-F<sub>n+k</sub> = F<sub>k</sub>.F<sub>n+1</sub> + F<sub>k-1</sub>.F<sub>n</sub>     [The "Addition" Rule]
-</pre>
-<pre>
-   F<sub>2n</sub> = F<sub>n</sub>.F<sub>n+1</sub> + F<sub>n-1</sub>.F<sub>n</sub>     [if k == n]
->> F<sub>2n</sub> = F<sub>n</sub>(F<sub>n+1</sub> + F<sub>n-1</sub>)
-</pre>
-Therefore, we can say that,
-<pre>
->> For any positive integer k , F<sub>nk</sub> is a multiple of F<sub>n</sub>
->> If F<sub>m</sub> is a multiple of F<sub>n</sub> , m is a multiple of n
-</pre>
-_GCD Identity:_
-<pre>
-GCD(F<sub>m</sub> , F<sub>n</sub>) = F<sub>GCD(m, n)</sub>
-</pre>
 Fibonacci numbers are the worst possible inputs for Euclidean algorithm <br>
 According to Zeckendorf's theorem, any natural number `n` can be uniquely represented as a sum of Fibonacci numbers
 <pre>
