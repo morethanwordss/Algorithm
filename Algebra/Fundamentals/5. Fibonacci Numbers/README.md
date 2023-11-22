@@ -19,7 +19,7 @@ if A = 1 1     then,  A<sup>n</sup> =  F<sub>n+1</sub> F<sub>n</sub>
        1 0             <sup> </sup>    F<sub>n  </sub> F<sub>n-1</sub>
 </pre>
 
-## F<sub>n+1</sub> . F<sub>n-1</sub> - (F<sub>n</sub>)<sup>2</sup> = (-1)<sup>n</sup>
+## F<sub>n+1</sub> . F<sub>n-1</sub> - (F<sub>n</sub>)<sup>2</sup> = (-1)<sup>n</sup> [Cassinis Identity]
 <pre>
 A<sup> </sup> = 1 1
  <sup> </sup>   1 0
@@ -35,7 +35,7 @@ Again, A<sup>n</sup> =  F<sub>n+1</sub> F<sub>n</sub>
 del(A<sup>n</sup>)   = F<sub>n+1</sub> . F<sub>n-1</sub> - F<sub>n</sub> . F<sub>n  </sub>
 </pre>
 <pre>
-Therefore, F<sub>n+1</sub> . F<sub>n-1</sub> - (F<sub>n</sub>)<sup>2</sup> = (-1)<sup>n</sup>
+Therefore, F<sub>n+1</sub> . F<sub>n-1</sub> - (F<sub>n</sub>)<sup>2</sup> = (-1)<sup>n</sup> [PROVED]
 </pre>
 
 ## F<sub>m+n</sub> = F<sub>m+1</sub>.F<sub>n</sub> + F<sub>m</sub>.F<sub>n-1</sub>
