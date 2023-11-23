@@ -59,6 +59,7 @@ if (x',y') is the solution for g, and
    
 The transition is (x, y) = (x', y') * (c/g)
 </pre>
+## Implementation
 ```c++
 int gcd(int a, int b, int &x, int &y) {
     if (b == 0) {
