@@ -4,29 +4,37 @@
 ## Theory
 <img width="518" alt="Screenshot 2023-11-23 150056" src="https://github.com/t0-ji/Algorithm/assets/108709544/4bf74c87-3ec6-4dd0-999a-d42985cf1bc2"> <br>
 <pre>
-This process ends with `b == 0` and `a = g`.
+Let gcd(a, b) = g
+This recursion ends with current (a, b) = (g, 0)
 </pre>
 <pre>
->> a.x + b.y = g
->> g.x + 0.y = g
-          
-A solution for (x, y) is (1, 0)
+   a.x + b.y = g
+>> g.x + 0.y = g [replacing (a, b) wiith (g, 0)
 </pre>
-The change in `(x, y)` change during the transition from `(b, a mod b)` to `(a, b)` as we go backwards up the recusrsive calls.
-For the coefficient `(x', y')` for `(b, a mod b)` , the Equation is, 
-<pre>b.x' + (a mod b).y' = g</pre>
-Substituting `a mod b` with `a - ceil(a / b).b`,
+<pre>
+For this equation, a solution for (x, y) is (1, 0) for (a, b) = (g, 0) --> This is the Base Case
+</pre>
+Now we have to calculate how (x, y) changes as the recursion goes bottoms up from (b, a mod b) to (a, b).
+g remains same in every recursion state while going bottom up.
+And the toppest value of (x, y) will be our desired result for the final a.x + b.y = g
+<pre>
+let (x, y) be the solution for (a, b) in any recursive state.
+Lets assume, in the next recursive call (x, y) becomes (x', y') and by the defintion, (a, b) becomes(b, a mod b).  
+</pre>
 
 <pre>
+Therefore, 
+          
           b.x' + (a mod b).y'               = g          
->>        b.x' + (a - ceil(a/b).b).y'       = g          
+>>        b.x' + (a - ceil(a/b).b).y'       = g    [substituting a mod b with a - ceil(a/b)*b]      
 >>        b.x' + a.y' - ceil(a/b).b.y'      = g
 >>        a.y' + b.x' - ceil(a/b).b.y'      = g
 >>        a.y' + b(x' - ceil(a/b).y')       = g
 </pre>
 <pre>
+from this equation, We can say that
 x = y'
-y = x' - ceil(a / b) . y'
+y = x' - ceil(a / b) . y' --> These two are the Function of how (x, y) changes while the recursion goes bottom up
 </pre>
 ## Implementation
 ### Recursive
