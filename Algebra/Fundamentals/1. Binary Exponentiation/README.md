@@ -1,67 +1,31 @@
 # Binary Exponentiation
-## Introduction
+## Theory
 <pre>
-Binary exponentiation is also known as exponentiation by squaring.
-By using this trick we can calculate aⁿ in O(log n) instead of O(n).
+Calculating A<sup>n</sup> in O(log n) time
 </pre>
-## Algorithm
-<pre>
-a<sup>n</sup>
-= 1        if n == 0
-    
-= (a<sup>(n / 2)</sup>)<sup>2</sup>    if n is even
-    
-= (a<sup>( (n-1) / 2)</sup>)<sup>2</sup> * a    if n is odd
-</pre>
+<img width="465" alt="Screenshot 2023-11-23 144215" src="https://github.com/t0-ji/Algorithm/assets/108709544/c766b433-c0fc-439b-894d-496a1203bba2"> <br>
 ## Implementation
-### i) Recursive 
+### Recursive 
 ```cpp
-/* c++ */
-long long pow(long long a, long long b) {
-    if (b == 0)
-        return 1;
-    long long res = pow(a, b / 2);
-    if (b % 2)
-        return res * res * a;
-    else
-        return res * res;
+long long binpow(long long a, long long b) {
+    if (b == 0) return 1;
+    long long res = binpow(a, b / 2);
+    if (b % 2) return res * res * a;
+    else return res * res;
 }
 ```
-```py
-# Python
-def power(a, b):
-    if b == 0:
-        return 1
-    res = power(a, b // 2)
-    if b % 2:
-        return res * res * a
-    else:
-        return res * res
-```
-### ii) Loop
+### Iterative
 ```cpp
 /* c++ */
-long long pow(long long a, long long b) {
+long long binpow(long long a, long long b) {
     long long res = 1;
     while (b > 0) {
-        if (b & 1)
-            res = res * a;
+        if (b & 1) res = res * a;
         a = a * a;
         b >>= 1;
     }
     return res;
 }
-```
-``` py
-# Python
-def power(a, b):
-    res = 1
-    while b > 0:
-        if b & 1:
-            res = res * a
-        a = a * a
-        b >>= 1
-    return res
 ```
 
 ## Applications
