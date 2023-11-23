@@ -16,7 +16,6 @@ long long binpow(long long a, long long b) {
 ```
 ### Iterative
 ```cpp
-/* c++ */
 long long binpow(long long a, long long b) {
     long long res = 1;
     while (b > 0) {
