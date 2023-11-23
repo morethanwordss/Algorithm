@@ -97,8 +97,10 @@ Solution #1: (x<sub>0</sub> + 1 . b/g, y<sub>0</sub> - 1 . a/g)
 Solution #2: (x<sub>0</sub> + 2 . b/g, y<sub>0</sub> - 2 . a/g)
 .........................................
 Solution #k: (x<sub>0</sub> + k . b/g, y<sub>0</sub> - k . a/g)
-
-Therefore, for any integer k, there exists a solution for a.x + b.y = c if c | g
+</pre>
+## Ultimate Overview
+<pre>
+For any integer k, there exists a solution for a.x + b.y = c if c | g
 And the solution is : (x, y) = (x<sub>0</sub> + k . b/g, y<sub>0</sub> - k . a/g),
 where (x<sub>0</sub>, y<sub>0</sub>) is also a solution which can be easily obtained by,
 (x<sub>0</sub>, y<sub>0</sub>) = (x', y') * (c/g),
