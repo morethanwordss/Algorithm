@@ -34,7 +34,7 @@ Lets assume in the next recursive call, (x, y) becomes (x', y') and by the defin
 Therefore, 
           
           b.x' + (a mod b).y'               = g          
->>        b.x' + (a - ceil(a/b).b).y'       = g    [substituting a mod b with a - ceil(a/b)*b]      
+>>        b.x' + (a - ceil(a/b).b).y'       = g    [substituting (a mod b) with a - ceil(a/b)*b]      
 >>        b.x' + a.y' - ceil(a/b).b.y'      = g
 >>        a.y' + b.x' - ceil(a/b).b.y'      = g
 >>        a.y' + b(x' - ceil(a/b).y')       = g
