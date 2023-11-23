@@ -1,6 +1,9 @@
 # Extended Euclidean Algorithm
+
+<pre>
 Problem:
-<pre>a.x + b.y = gcd(a, b)
+   
+a.x + b.y = gcd(a, b)
 Given the value of (a, b), We have to find out the value of (x, y) such that it satisfies the equation.
 </pre>
 
