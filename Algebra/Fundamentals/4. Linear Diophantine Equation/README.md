@@ -102,7 +102,7 @@ Solution #k: (x<sub>0</sub> + k . b/g, y<sub>0</sub> - k . a/g)
 <pre>
 For any integer k, there exists a solution for a.x + b.y = c if c | g
 And the solution is : (x, y) = (x<sub>0</sub> + k . b/g, y<sub>0</sub> - k . a/g),
-where (x<sub>0</sub>, y<sub>0</sub>) is also a solution which can be easily obtained by,
+where (x<sub>0</sub>, y<sub>0</sub>) is also a solution for a.x + b.y = c, which can be easily obtained by,
 (x<sub>0</sub>, y<sub>0</sub>) = (x', y') * (c/g),
 where (x', y') is the solution of a.x + b.y = gcd(a, b),
 which can also be easily obtained from the Extended Euclidean Algorithm
