@@ -15,7 +15,7 @@ This recursion ends with current (a, b) = (g, 0)
 </pre>
 <pre>
    a.x + b.y = g
->> g.x + 0.y = g [replacing (a, b) wiith (g, 0)
+>> g.x + 0.y = g [replacing (a, b) wiith (g, 0)]
 </pre>
 <pre>
 For this equation, a solution for (x, y) is (1, 0) for (a, b) = (g, 0) --> This is the Base Case
