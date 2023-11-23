@@ -52,8 +52,11 @@ y   = y' . k
     = y' . (c/g)   [As c = g.k]
 
 </pre>
+### Overview
 <pre>
-(x',y') is the solution for g and (x, y) is the solution for c
+if (x',y') is the solution for g, and
+   (x , y) is the solution for c, then
+   
 The transition is (x, y) = (x', y') * (c/g)
 </pre>
 ```c++
