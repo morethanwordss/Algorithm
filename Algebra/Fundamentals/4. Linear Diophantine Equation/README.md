@@ -1,52 +1,64 @@
 # Linear Diophantine Equation
-<pre>a.x + b.y = c </pre>
+## Introduction
+
+<pre>
+Problem Statement:
+
+a.x + b.y = c
+Given the value of (a, b, c), We have to find out the value of (x, y) such that it satisfies the equation.
+</pre>
 
 ## Theory
+
+### Degenerate Case
 <pre>
-if (a == 0 && b == 0):
+Case: (a, b) = (0, 0)
    
    a.x + b.y = c
->> 0.x + 0.y = c
+>> 0.x + 0.y = c [replacing (a, b) with(0, 0)]
 >> 0 + 0 = c
 >> c = 0
-   
-So, (a == 0 && b == 0 && c != 0) has no soln
 </pre>
-
 <pre>
-if (a == 0 || b == 0):
+Therefore, for (a, b) = (0, 0),
    
-   a.x + b.y = c
->> 0.x + b.y = c [let a == 0 in this case]
->> b.y = c
->> y = c / b
-   
-if (a == 0) y = c / b;
-if (b == 0) x = c / a;
+if c = 0, many solution exists,
+Otherwise there is no solution.
 </pre>
 
+### Usual Case
 <pre>
-if (a != 0 and b != 0):
-   
-(a.x + b.y) % g == 0 because,
->>  a.x % g == 0
->>  b.y % g == 0
+Let denote gcd(a, b) with g.
+Now,
+(a.x + b.y) | g  because, (a.x | g) and (b.y | g)
 
-So, (c % g != 0) has no soln
+As c = a.x + b.y, there exist solutions if and only if c | g
 </pre>
 
-## Finding One Solution
+### Finding Any Solution
 <pre>
 Euclidean Extended Algorithm:
-   a.x' + b.y'       = g
->> (a.x' + b.y').k   = g.k
+   
+   a.x' + b.y'       = g   
+>> (a.x' + b.y').k   = g.k [Let k be any integer]
 >> a.x'.k + b.y'.k   = g.k
 >> a.x'.k + b.y'.k   = c     [let g.k == c]
 >> a.x + b.y         = c
 </pre>
 <pre>
-x   = x'.k   = x'.(c/g)
-y   = y'.k   = y'.(c/g)
+Now,
+k = c/g [As c = g.k]
+From the previous equation, We can say that,
+x   = x' . k 
+    = x' . (c/g)
+   
+y   = y' . k 
+    = y' . (c/g)
+
+</pre>
+<pre>
+(x',y') is the solution for g and (x, y) is the solution for c
+The transition is (x, y) = (x', y') * (c/g)
 </pre>
 ```c++
 int gcd(int a, int b, int &x, int &y) {
