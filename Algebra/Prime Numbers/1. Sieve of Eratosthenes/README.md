@@ -30,11 +30,11 @@ void primeSieve() {
 ### Imoplementation 2
 ```c++
 int const N = 1e7;
-bool prime[N + 1]; // 0 if prime, 1 otherwise
+bool prime[N + 1];    // 0 if prime, 1 otherwise
 
 void primeSieve() {
     prime[0] = prime[1] = 1;
-    for (int i = 3; i * i <= N; i += 2) {              // skipped 2's multiple, check this into account while coding
+    for (int i = 3; i * i <= N; i += 2) {    // skipped 2's multiple, check this into account while coding
         if (prime[i] == 0) { 
             for (int j = i * i; j <= N; j += 2 * i) {
                 prime[j] = 1;
