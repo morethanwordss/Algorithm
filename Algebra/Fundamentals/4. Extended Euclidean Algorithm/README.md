@@ -1,5 +1,8 @@
 # Extended Euclidean Algorithm
-<pre>a.x + b.y = gcd(a, b)</pre>
+Problem:
+<pre>a.x + b.y = gcd(a, b)
+Given the value of (a, b), We have to find out the value of (x, y) such that it satisfies the equation.
+</pre>
 
 ## Theory
 <img width="518" alt="Screenshot 2023-11-23 150056" src="https://github.com/t0-ji/Algorithm/assets/108709544/4bf74c87-3ec6-4dd0-999a-d42985cf1bc2"> <br>
