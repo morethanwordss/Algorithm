@@ -9,7 +9,8 @@ This process ends with `b == 0` and `a = g`.
 <pre>
 >> a.x + b.y = g
 >> g.x + 0.y = g
-A solution is (x, y) = (1, 0)
+          
+A solution for (x, y) is (1, 0)
 </pre>
 The change in `(x, y)` change during the transition from `(b, a mod b)` to `(a, b)` as we go backwards up the recusrsive calls.
 For the coefficient `(x', y')` for `(b, a mod b)` , the Equation is, 
