@@ -44,14 +44,12 @@ Euclidean Extended Algorithm:
 >> a.x + b.y         = c
 </pre>
 <pre>
-Now,
-k = c/g [As c = g.k]
-From the previous equation, We can say that,
+Therefore, 
 x   = x' . k 
-    = x' . (c/g)
+    = x' . (c/g)   [As c = g.k]
    
 y   = y' . k 
-    = y' . (c/g)
+    = y' . (c/g)   [As c = g.k]
 
 </pre>
 <pre>
