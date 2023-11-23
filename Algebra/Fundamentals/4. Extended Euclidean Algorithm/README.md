@@ -27,7 +27,7 @@ And the toppest value of (x, y) will be our desired result for the final a.x + b
 </pre>
 <pre>
 let (x, y) be the solution for (a, b) in any state of the recursion.
-Lets assume, in the next recursive call (x, y) becomes (x', y') and by the defintion, (a, b) becomes(b, a mod b).  
+Lets assume in the next recursive call, (x, y) becomes (x', y') and by the defintion, (a, b) becomes(b, a mod b).  
 </pre>
 
 <pre>
