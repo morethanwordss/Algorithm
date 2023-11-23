@@ -2,11 +2,10 @@
 <pre>a.x + b.y = gcd(a, b)</pre>
 
 ## Theory
+<img width="518" alt="Screenshot 2023-11-23 150056" src="https://github.com/t0-ji/Algorithm/assets/108709544/4bf74c87-3ec6-4dd0-999a-d42985cf1bc2"> <br>
 <pre>
-if (b == 0) gcd(a, b) = a;
-else gcd(a, b) = gcd(b, a mod b);
+This process ends with `b == 0` and `a = g`.
 </pre>
-This process ends with `b == 0` and `a = g`. <br>
 <pre>
 >> a.x + b.y = g
 >> g.x + 0.y = g
@@ -28,7 +27,8 @@ Substituting `a mod b` with `a - ceil(a / b).b`,
 x = y'
 y = x' - ceil(a / b) . y'
 </pre>
-## Extended Euclidean Algorithm (Recursive)
+## Implementation
+### Recursive
 ```c++
 int gcd(int a, int b, int& x, int& y) {
     if (b == 0) {
@@ -43,7 +43,7 @@ int gcd(int a, int b, int& x, int& y) {
     return d;
 }
 ```
-## Extended Euclidean Algorithm (Loop)
+### Iterative
 ```c++
 int gcd(int a, int b, int& x, int& y) {
     x = 1, y = 0;
