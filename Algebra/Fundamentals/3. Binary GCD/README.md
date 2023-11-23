@@ -32,17 +32,3 @@ int gcd(int a, int b) {
     return a << shift;
 }
 ```
-```py
-# Python
-def gcd(a, b):
-    if not a or not b:
-        return a | b
-    shift = (a | b).bit_length() - 1
-    a >>= a.bit_length() - 1
-    while b:
-        b >>= b.bit_length() - 1
-        if a > b:
-            a, b = b, a
-        b -= a
-    return a << shift
-```
