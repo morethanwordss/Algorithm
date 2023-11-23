@@ -116,7 +116,7 @@ which can also be easily obtained from the Extended Euclidean Algorithm
 = x<sub>0</sub> + y<sub>0</sub> + k . (b/g - a/g)
 = x<sub>0</sub> + y<sub>0</sub> + k . (b - a) / g
 
-if (b > a) (x + y)<sub>min</sub> = k<sub>min</sub>; [less pos]
-if (b < a) (x + y)<sub>min</sub> = k<sub>max</sub>; [maxx neg]
+if (b > a) (x + y)<sub>min</sub> = k<sub>min</sub>; [minimum positive value of x + y]
+if (b < a) (x + y)<sub>min</sub> = k<sub>max</sub>; [maximum negative value of x + y]
 if (b == a) all same
 </pre>
