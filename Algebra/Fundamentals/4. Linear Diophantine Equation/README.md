@@ -29,9 +29,7 @@ Otherwise there is no solution.
 ### Usual Case
 <pre>
 Let denote gcd(a, b) with g.
-Now,
-(a.x + b.y) | g  because, (a.x | g) and (b.y | g)
-
+Now, (a.x + b.y) | g  because, (a.x | g) and (b.y | g)
 As c = a.x + b.y, there exist solutions if and only if c | g
 </pre>
 
