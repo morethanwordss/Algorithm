@@ -92,11 +92,11 @@ Let (x<sub>0</sub>, y<sub>0</sub>) be any solution for a.x + b.y = c.
 >> a(x<sub>0</sub> + b/g) + b(y<sub>0</sub> - a/g) = c
 >> a.x<sub>1</sub> + b.y<sub>1</sub> = c
 
-Solution 0: (x<sub>0</sub> + 0 . b/g, y<sub>0</sub> - 0 . a/g)
-Solution 1: (x<sub>0</sub> + 1 . b/g, y<sub>0</sub> - 1 . a/g)
-Solution 2: (x<sub>0</sub> + 2 . b/g, y<sub>0</sub> - 2 . a/g)
-........................................
-Solution k: (x<sub>0</sub> + k . b/g, y<sub>0</sub> - k . a/g)
+Solution #0: (x<sub>0</sub> + 0 . b/g, y<sub>0</sub> - 0 . a/g)
+Solution #1: (x<sub>0</sub> + 1 . b/g, y<sub>0</sub> - 1 . a/g)
+Solution #2: (x<sub>0</sub> + 2 . b/g, y<sub>0</sub> - 2 . a/g)
+.........................................
+Solution #k: (x<sub>0</sub> + k . b/g, y<sub>0</sub> - k . a/g)
 </pre>
 
 ## Finding a solution with minimum value of (x + y)
