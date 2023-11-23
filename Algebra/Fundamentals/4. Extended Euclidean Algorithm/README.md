@@ -20,9 +20,11 @@ This recursion ends with current (a, b) = (g, 0)
 <pre>
 For this equation, a solution for (x, y) is (1, 0) for (a, b) = (g, 0) --> This is the Base Case
 </pre>
+<pre>
 Now we have to calculate how (x, y) changes as the recursion goes bottoms up from (b, a mod b) to (a, b).
 g remains same in every recursion state while going bottom up.
 And the toppest value of (x, y) will be our desired result for the final a.x + b.y = g
+</pre>
 <pre>
 let (x, y) be the solution for (a, b) in any recursive state.
 Lets assume, in the next recursive call (x, y) becomes (x', y') and by the defintion, (a, b) becomes(b, a mod b).  
