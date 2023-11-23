@@ -38,7 +38,7 @@ As c = a.x + b.y, there exist solutions if and only if c | g
 Euclidean Extended Algorithm:
    
    a.x' + b.y'       = g   
->> (a.x' + b.y').k   = g.k [Let k be any integer]
+>> (a.x' + b.y').k   = g.k   [Let k be any integer]
 >> a.x'.k + b.y'.k   = g.k
 >> a.x'.k + b.y'.k   = c     [let g.k == c]
 >> a.x + b.y         = c
