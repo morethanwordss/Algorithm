@@ -84,6 +84,8 @@ bool gcdSoln(int a, int b, int c, int &x, int &y, int &g) {
 ```
 ## Finding All Solution
 <pre>
+Let (x<sub>0</sub>, y<sub>0</sub>) be any solution for a.x + b.y = c.
+   
    a.x<sub>0</sub> + b.y<sub>0</sub> = c
 >> a.x<sub>0</sub> + b.y<sub>0</sub> + ((a.b) / g) - ((a.b) / g) = c
 >> a.x<sub>0</sub> + ((a.b) / g) + b.y<sub>0</sub> - ((a.b) / g) = c
