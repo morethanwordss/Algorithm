@@ -10,11 +10,9 @@ Binary exponentiation (also known as exponentiation by squaring) is a trick whic
 
 ## Algorithm
 
-Raising $a$ to the power of $n$ is expressed naively as multiplication by $a$ done $n - 1$ times:
-
 $$a^{n} = a \cdot a \cdot \ldots \cdot a$$
 
-However, this approach is not practical for large $a$ or $n$.
+Raising $a$ to the power of $n$ is expressed naively as multiplication by $a$ done $n - 1$ times. However, this approach is not practical for large $a$ or $n$.
 
 $$a^{b+c} = a^b \cdot a^c$$
 
