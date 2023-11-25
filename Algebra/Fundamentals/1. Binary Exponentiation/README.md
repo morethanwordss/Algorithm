@@ -8,20 +8,15 @@ e_maxx_link: binary_pow
 
 Binary exponentiation (also known as exponentiation by squaring) is a trick which allows to calculate $a^n$ using only $O(\log n)$ multiplications (instead of $O(n)$ multiplications required by the naive approach).
 
-It also has important applications in many tasks unrelated to arithmetic, since it
-can be used with any operations that have the property of **associativity**:
-
-$$(X \cdot Y) \cdot Z = X \cdot (Y \cdot Z)$$
-
-Most obviously this applies to modular multiplication, to multiplication of matrices and
-to other problems which we will discuss below.
-
 ## Algorithm
 
 Raising $a$ to the power of $n$ is expressed naively as multiplication by $a$ done $n - 1$ times:
-$a^{n} = a \cdot a \cdot \ldots \cdot a$. However, this approach is not practical for large $a$ or $n$.
 
-$a^{b+c} = a^b \cdot a^c$ and $a^{2b} = a^b \cdot a^b = (a^b)^2$.
+$$a^{n} = a \cdot a \cdot \ldots \cdot a$$
+
+However, this approach is not practical for large $a$ or $n$.
+
+$$a^{b+c} = a^b \cdot a^c$ and $a^{2b} = a^b \cdot a^b = (a^b)^2$$.
 
 The idea of binary exponentiation is, that we split the work using the binary representation of the exponent.
 
