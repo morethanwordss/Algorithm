@@ -2,13 +2,13 @@
 
 Given a number $n$, find all prime numbers in a segment $[2;n]$.
 
-The standard way of solving a task is to use the sieve of Eratosthenes. This algorithm is very simple, but it has runtime $O(n \log \log n)$.
+The standard way of solving a task is to use the Sieve of Eratosthenes. This algorithm is very simple, but it has runtime $O(n \log \log n)$.
 
 Although there are a lot of known algorithms with sublinear runtime i.e. $O(n)$, the algorithm described below is interesting by its simplicity: it isn't any more complex than the classic sieve of Eratosthenes.
 
 Besides, the algorithm given here calculates **factorizations of all numbers** in the segment $[2; n]$ as a side effect, and that can be helpful in many practical applications.
 
-The weakness of the given algorithm is in using more memory than the classic sieve of Eratosthenes': it requires an array of $n$ numbers, while for the classic sieve of Eratosthenes it is enough to have $n$ bits of memory (which is 32 times less).
+The weakness of the given algorithm is in using more memory than the classic Sieve of Eratosthenes: it requires an array of $n$ numbers, while for the classic sieve of Eratosthenes it is enough to have $n$ bits of memory (which is 32 times less).
 
 Thus, it makes sense to use the described algorithm only until for numbers of order $10^7$ and not greater.
 
