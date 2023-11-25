@@ -16,7 +16,7 @@ $$a^{n} = a \cdot a \cdot \ldots \cdot a$$
 
 However, this approach is not practical for large $a$ or $n$.
 
-$$a^{b+c} = a^b \cdot a^c$ and $a^{2b} = a^b \cdot a^b = (a^b)^2$$.
+$$a^{b+c} = a^b \cdot a^c$ and $a^{2b} = a^b \cdot a^b = (a^b)^2$$
 
 The idea of binary exponentiation is, that we split the work using the binary representation of the exponent.
 
