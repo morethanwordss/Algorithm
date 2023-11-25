@@ -167,12 +167,6 @@ vector<char> segmentedSieveNoPreGen(long long L, long long R) {
 
 Obviously, the complexity is worse, which is $O((R - L + 1) \log (R) + \sqrt R)$. However, it still runs very fast in practice.
 
-## Linear time modification
-
-We can modify the algorithm in a such a way, that it only has linear time complexity.
-This approach is described in the article [Linear Sieve](prime-sieve-linear.md).
-However, this algorithm also has its own weaknesses.
-
 ## Practice Problems
 
 * [Leetcode - Four Divisors](https://leetcode.com/problems/four-divisors/)
