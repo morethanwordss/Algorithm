@@ -5,8 +5,6 @@ tags:
 e_maxx_link: eratosthenes_sieve
 ---
 
-# Sieve of Eratosthenes
-
 Sieve of Eratosthenes is an algorithm for finding all the prime numbers in a segment $[1;n]$ using $O(n \log \log n)$ operations.
 
 The algorithm is very simple:
