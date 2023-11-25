@@ -12,7 +12,7 @@ And we continue this procedure until we processed all numbers in the row.
 
 In the following image you can see a visualization of the algorithm for computing all prime numbers in the range $[1; 16]$. It can be seen, that quite often we mark numbers as composite multiple times.
 
-<center>![Sieve of Eratosthenes](sieve_eratosthenes.png)</center>
+<center></center>![sieve_eratosthenes](https://github.com/t0-ji/Algorithm/assets/108709544/a4b90f62-c79f-4777-8ed2-86b28af8803f)</center>
 
 The idea behind is this:
 A number is prime, if none of the smaller prime numbers divides it.
